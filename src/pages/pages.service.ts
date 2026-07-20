@@ -188,6 +188,19 @@ export class PagesService {
       });
     }
 
+    if (refs.includes('testimonials')) {
+      const where: Prisma.TestimonialWhereInput = { approved: true };
+      if (data.featuredOnly === true) where.featured = true;
+      if (typeof data.source === 'string') {
+        where.source = data.source as Prisma.TestimonialWhereInput['source'];
+      }
+      resolved.testimonials = await this.prisma.testimonial.findMany({
+        where,
+        orderBy: [{ featured: 'desc' }, { order: 'asc' }, { reviewedAt: 'desc' }, { createdAt: 'desc' }],
+        take: typeof data.limit === 'number' ? data.limit : undefined,
+      });
+    }
+
     return resolved;
   }
 }

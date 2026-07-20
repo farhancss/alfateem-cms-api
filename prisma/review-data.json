@@ -1,0 +1,236 @@
+{
+  "_comment": "Real reviews captured from Google (place 0x894b5cdbd0d13dc3, 5.0★ / 87 reviews) and Facebook (100% recommend / 58 reviews) on 2026-07-20. Facebook gates all but the first review behind login, so only the publicly visible one is here. reviewedAt dates for Google are approximations derived from relative timestamps ('4 months ago') at capture time. Re-capture or add newer reviews from the admin panel; db:seed:reviews replaces the testimonials table with this file.",
+  "reviews": [
+    {
+      "author": "Khizar Baloch",
+      "role": null,
+      "quote": "I recently completed my Web Development course at Alfateem- Academy and had a great experience. The instructor (Sir Ayaz Ahmed) explains concepts in a very simple and practical way, making it easy to understand even difficult topics. The learning environment is supportive, and the instructor is very caring and always ready to help. Highly recommended for anyone who wants to learn web or full-stack development.",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/113939633907785363880/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjWFgyUHlOFVJ7BKCPVtQI-sw1Z3ahWGkJuFCHGUTR5kFBUgUvKA=s64-c-rp-mo-br100",
+      "reviewedAt": "2026-03-20",
+      "featured": true
+    },
+    {
+      "author": "Yasir Ali",
+      "role": null,
+      "quote": "I had the opportunity to learn Web & App Development from Sir Ayaz at Al Fateem Academy, and it has been an amazing experience. Their teaching style is very unique and focused mainly on practical work rather than just theory.\n\nDuring my time there, I gained real-world skills and hands-on experience by working on practical projects. Honestly, the kind of knowledge and experience you get here in one year is even more valuable than what many students gain in a four-year university degree.\n\nSir Ayaz guides every student personally and makes sure everyone understands the concepts clearly. The environment is very supportive, and students are trained according to real industry standards.\n\nIn my opinion, there is no academy like Al Fateem Academy for learning Web and App Development. It is the best place for anyone who truly wants to build strong practical skills and become a professional developer.\n\nHighly recommended!",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/115940672485530900359/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjU9_XaKaFfUS-IXCR2N1dyvX30cZ0m1ITRXMLNUoxCI45u6BYTb=s64-c-rp-mo-br100",
+      "reviewedAt": "2026-03-20",
+      "featured": true
+    },
+    {
+      "author": "Vishaka Bharwani",
+      "role": null,
+      "quote": "I had the chance to learn web development at this institute and it was honestly a very enjoyable and memorable experience for me. The biggest reason is the way our sir teaches. He is extremely motivating, enthusiastic and always very cooperative with the students. His teaching style makes coding feel fun instead of difficult.\nWhenever the class starts losing interest while coding, he immediately notices it and says something funny or cracks a small joke that makes everyone laugh and get back into the learning mood again. Because of this environment even someone who comes from a completely non technical background starts developing interest in coding and web development.\nWeb development is not an easy course at all, but the way he teaches makes the journey much clearer. The course is designed for about 1.5 years and during this time he makes sure every concept is properly understood. He focuses on making sure every student understands things step by step so that by the end of the course a person can confidently become a full stack developer.\nFor anyone who wants to learn web development in a motivating and supportive environment this institute is truly a great place to start.",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/116957401971628316763/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjUQdL088tQwoMe-uwhCBUlvI5aWv5x22CwQ7TMT25fNqy316U9aXQ=s64-c-rp-mo-br100",
+      "reviewedAt": "2026-03-20",
+      "featured": true
+    },
+    {
+      "author": "Muhammad Hammad",
+      "role": null,
+      "quote": "ALHAMDULILLAH, my experience at Al-Fateem Academy has been excellent. Sir Ayaz Ahmed is a very knowledgeable and supportive teacher. May ALLAH bless him and keep him happy. He explains everything in a very clear and professional way, which makes learning easy and enjoyable.",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/105061272874029953606/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjV5l7iZrL6BO1fn4ve7I6ZnhonyUXA3F-8UdQuOddwlkB5pVLe52Q=s64-c-rp-mo-br100",
+      "reviewedAt": "2026-03-20",
+      "featured": false
+    },
+    {
+      "author": "Tayyaba",
+      "role": null,
+      "quote": "I had a wonderful learning experience at Al Fateem Academy. Sir Ayaz Ahmed is an outstanding instructor who explains even complex concepts in a very simple and understandable way.\nI highly recommend Al Fateem Academy to anyone who wants to learn Full Stack Web Development in a professional and friendly learning environment.\nThank you, Sir, for your guidance, continuous support, and motivation. Your mentorship has played a very important role in my learning journey.",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/100875652719553686507/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKsApO68IW5kVTG_v_4EflrFvJ0LovF_6AijOv5iNth2G8oYA=s64-c-rp-mo-br100",
+      "reviewedAt": "2026-03-20",
+      "featured": false
+    },
+    {
+      "author": "Anus Raza",
+      "role": null,
+      "quote": "I am learning Web Development at Al Fateem Academy, and Sir Syed Ayaz Ahmed is an excellent instructor. He explains complex topics in a simple way and makes sure every student understands the lesson. His supportive attitude and practical teaching method make learning enjoyable.",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/108960664759802525396/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIGXH-O7528M2xVk-V8fQOWJej1ixofh0L2uN-RxUaGstnnVw=s64-c-rp-mo-br100",
+      "reviewedAt": "2026-03-20",
+      "featured": false
+    },
+    {
+      "author": "Musawir",
+      "role": null,
+      "quote": "I had a great learning experience at Al Fateem Academy. The instructor explains programming concepts in a very clear and simple way, which makes it easy to understand even for beginners. The environment is friendly and supportive, and I learned many useful programming skills from here. This academy really helped me improve my coding knowledge and confidence. I highly recommend Al Fateem Academy to anyone who wants to learn programming.",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/106735826324910236315/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjUgQpGH0GonGJP331RL1tLlLuhZ7oM3lbrrubtnUSRCuKkNmAQj=s64-c-rp-mo-br100",
+      "reviewedAt": "2026-03-20",
+      "featured": false
+    },
+    {
+      "author": "Salar Minhas",
+      "role": null,
+      "quote": "I had a great learning experience at Al Fateem Academy. The environment is friendly and supportive, and I learned many useful programming skills from here. This academy really helped me improve my coding knowledge and confidence. I highly recommend Al Fateem Academy to anyone who wants to learn programming.",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/117580764920402744909/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjXt9Csc_tLSNgAC2GOieTr4ajuIz5CKE-WIMQKZ1p4dNLmnNRVe=s64-c-rp-mo-br100",
+      "reviewedAt": "2026-03-20",
+      "featured": false
+    },
+    {
+      "author": "Sajid Ahmed Kasmani",
+      "role": null,
+      "quote": "Amazing experience at Al-Fateem Academy, such a nice mentor Sir Ayaz, who teaches everything of coding very nicely and deeply. I recommend every beginner to join Al-Fateem Academy. 100% job guaranteed by Sir is also true.",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/109534058642273129664/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKkDocQOczWG6nDI2efTcJEt7PGPjDB9xbBiMn4EFflTflBqw=s64-c-rp-mo-br100",
+      "reviewedAt": "2026-03-20",
+      "featured": false
+    },
+    {
+      "author": "Muhammad Bilal",
+      "role": null,
+      "quote": "My experience with Alfateem Academy has been very good. Sir Ayaz explains every concept in a very clear and simple way, which makes learning easy and interesting. I highly recommend Alfateem Academy to anyone who wants to learn web development.",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/100462882866826907736/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKI-69hxD_7w1Ln-sRiEZlf2gyb8NXSTeOcAzbfhrGAA-IJfA=s64-c-rp-mo-br100",
+      "reviewedAt": "2026-03-20",
+      "featured": false
+    },
+    {
+      "author": "Muhammad Junaid",
+      "role": null,
+      "quote": "Great learning experience! The Full Stack Development course was well-structured and the instructors were very supportive and knowledgeable. It really helped me strengthen my development skills. Highly recommended for anyone starting their journey in web development.",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/116574660818482091157/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjXhHbnpTKLir9B_XgCDdDLZnyZoO09yvhQCD24JcfAYKlsz-mNW=s64-c-rp-mo-br100",
+      "reviewedAt": "2026-03-20",
+      "featured": false
+    },
+    {
+      "author": "Aamir Khatri",
+      "role": null,
+      "quote": "AL FATEEM ACADEMY is a really great institute for the people who wants to get into programming and technology field.\nSir AYAZ AHMED MAST is extremely knowledgeable and a very supportive teacher.",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/102557080872374850315/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLNfpqTHkIXdLCSb_OBjukurjJN8TZ6oUKVC4uXdbCe_eOh=s64-c-rp-mo-br100",
+      "reviewedAt": "2026-03-20",
+      "featured": false
+    },
+    {
+      "author": "Mohammad Ali",
+      "role": null,
+      "quote": "Masha Allah, an excellent experience! Sir is very knowledgeable and explains the topic in a clear and helpful way. He even gives extra time if needed and patiently answers questions again and again without any hesitation. Truly a great teacher.",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/107926540115982171841/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjXEbb-vw0dR0q7ZtRpgQ_A6Xi1oXTwHa4XHOu83jeyPfBlJ84k=s64-c-rp-mo-br100",
+      "reviewedAt": "2026-03-20",
+      "featured": false
+    },
+    {
+      "author": "Sana Tariq",
+      "role": null,
+      "quote": "My experience at Al-Fateem Academy was excellent. The instructors were professional, and the learning environment was very supportive and helpful for improving my web development skills.",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/100121522658177668344/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjXc3mIw9JI46C2EOHC-QQhMnb7UvjtyAk4jX4usAmjwk7nnc6jP=s64-c-rp-mo-br100",
+      "reviewedAt": "2026-03-20",
+      "featured": false
+    },
+    {
+      "author": "Zain Ul Abideen",
+      "role": null,
+      "quote": "I had a great experience with Al Fateem Academy. It's an excellent place for learning, and the teaching quality is outstanding. The environment is supportive and well-organized. Sir Ayaz Ahmed is a very knowledgeable and dedicated teacher who explains everything clearly and makes sure students truly understand the concepts. I learned a lot under his guidance and highly recommend this academy to anyone looking to improve their skills and knowledge.",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/106815681926148226290/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocI-dxCNazShucOnkqLLug9BwD__yjuUjFuukxNNLxxKrNIPPA=s64-c-rp-mo-br100",
+      "reviewedAt": "2025-08-20",
+      "featured": false
+    },
+    {
+      "author": "Sameer Kherani",
+      "role": null,
+      "quote": "Alfateem Academy is an excellent institute for web development, where students receive training under the guidance of Sir Ayaz. Sir Ayaz is an experienced and dedicated instructor who teaches web development concepts in a simple and understandable way.\n\nHis teaching style is practical and interactive, allowing students to gain both theoretical and hands-on knowledge. He focuses on each student individually, providing guidance tailored to their strengths and weaknesses. If you're aiming to build a career in web development, this course at Alfateem Academy with Sir Ayaz will be very effective and helpful. I highly recommend it 100%!",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/106857089959144044054/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjXmO0Rsrr4NmD9-D0GJROYHYEElmNj7veXXHndzPfbOS_6s3CwK=s64-c-rp-mo-br100",
+      "reviewedAt": "2025-07-20",
+      "featured": false
+    },
+    {
+      "author": "Jawed Ahmed",
+      "role": null,
+      "quote": "This month, insha'Allah, I will complete a 1.5-year web development course from AL-Fateem Academy, where I learned HTML, CSS, JavaScript, Bootstrap, PHP, Laravel, and both basic and advanced WordPress theme development. The experience was outstanding, thanks to the well-structured curriculum and the exceptional teaching of Sir Ayaz Ahmed. His knowledge and unique teaching style made complex topics easy to understand, and he was always supportive. The hands-on training prepared me with practical skills I can confidently apply in my career. I highly recommend Al-Fateem Academy to anyone looking to excel in web development.",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/111264934371808509666/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjXMNIufVRHwS0oJ4ypldcsgTWkmoCmGpGhzGydrA4_2fUHQMuxY=s64-c-rp-mo-br100",
+      "reviewedAt": "2025-07-20",
+      "featured": true
+    },
+    {
+      "author": "Saif Khan",
+      "role": null,
+      "quote": "Al Fateem Academy stands out as an outstanding web development institute, offering an in-depth and hands-on approach to training aspiring web developers. Led by the highly skilled and dedicated Sir Ayaz Ahmed Mast, the academy provides an educational experience that is both enriching and practical, equipping students with the knowledge and confidence needed to excel in the competitive tech industry.\n\nThe curriculum is thoughtfully designed, covering everything from foundational skills like HTML, CSS, and JavaScript to more advanced areas such as backend development and database management. What makes Al Fateem Academy unique is its focus on practical, real-world projects, allowing students to build a portfolio that showcases their skills. This practical approach not only enhances learning but also gives students a competitive edge when they enter the job market.",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/110328877343246849365/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJLOolTgA5Pz4xS5QBGG_mcIkT5Vbw7_7tQCowRhuqZB4TU4A=s64-c-rp-mo-br100",
+      "reviewedAt": "2025-07-20",
+      "featured": true
+    },
+    {
+      "author": "Salman",
+      "role": null,
+      "quote": "I recently completed the Web Development course at Al-Fateem Academy, and it was an excellent experience. I was taught by Sir Ayaz Ahmed Mast, who is a highly professional programmer. Before joining this course, I had many unclear concepts related to programming, but Sir Ayaz Ahmed Mast explained and guided me through these concepts in a very clear and easy-to-understand manner. I will definitely recommend this course to others!",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/112922129877727200736/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocI3NUAvm4N43kqtsndwNt7VyxNVuvwwJ_eOT8nJFMZYdVSyKA=s64-c-rp-mo-br100",
+      "reviewedAt": "2025-07-20",
+      "featured": false
+    },
+    {
+      "author": "Gul Ahmed Shah",
+      "role": null,
+      "quote": "My journey at Al-Fateem Academy was a transformative experience that ignited my passion for web development. The instructor's exceptional teaching style, which seamlessly blended technical explanations with real-world examples, made learning an engaging and enjoyable process. Through a series of hands-on projects, I was able to apply the theoretical knowledge gained in class to real-world scenarios, solidifying my understanding and boosting my confidence.\n\nBeyond the technical skills, the instructor's commitment to fostering a positive and supportive learning environment was invaluable. I am incredibly grateful for the opportunity to have learned from such an inspiring mentor.",
+      "rating": 5,
+      "source": "GOOGLE",
+      "sourceUrl": "https://www.google.com/maps/contrib/102020633858839855766/reviews",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVsSBNifNeyqhxNklXn_cMtedSJ0D9I9YSkIT4D0MtfpoRO84g=s64-c-rp-mo-br100",
+      "reviewedAt": "2025-07-20",
+      "featured": false
+    },
+    {
+      "author": "Basit Akram",
+      "role": null,
+      "quote": "I recently completed a web development course from Al Fateem Academy and I must say that Sir Ayaz Ahmed is an excellent teacher. He explains concepts very clearly and ensures thorough practice for each topic. His teaching approach makes it easy to understand concepts and helps develop industry ready skills. Sir Ayaz's dedication and support make the learning journey enjoyable and straightforward. Many thanks to Sir Ayaz and Al Fateem Academy.",
+      "rating": 5,
+      "source": "FACEBOOK",
+      "sourceUrl": "https://www.facebook.com/AlFateemAcademyOfficial/reviews",
+      "avatar": null,
+      "reviewedAt": "2024-11-15",
+      "featured": true
+    }
+  ]
+}

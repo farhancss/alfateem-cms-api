@@ -28,7 +28,7 @@ export interface SectionDefinition {
   /** Zod schema for the `data` payload. */
   schema: z.ZodTypeAny;
   /** Collections this section resolves live (embedded content still allowed too). */
-  refs: Array<'courses' | 'graduates' | 'posts'>;
+  refs: Array<'courses' | 'graduates' | 'posts' | 'testimonials'>;
 }
 
 export const SECTION_REGISTRY: Record<SectionType, SectionDefinition> = {
@@ -177,6 +177,21 @@ export const SECTION_REGISTRY: Record<SectionType, SectionDefinition> = {
           }),
         )
         .min(1),
+    }),
+  },
+
+  testimonials: {
+    type: SectionType.testimonials,
+    label: 'Testimonials / reviews',
+    refs: ['testimonials'],
+    schema: z.object({
+      eyebrow: z.string().default(''),
+      title: z.string(),
+      body: z.string().optional(),
+      // Reference config, resolved against the Testimonials collection on read.
+      featuredOnly: z.boolean().default(false),
+      source: z.enum(['GOOGLE', 'FACEBOOK', 'MANUAL', 'WEBSITE']).optional(),
+      limit: z.number().int().positive().max(50).optional(),
     }),
   },
 };

@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { APP_GUARD } from '@nestjs/core';
+import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { LoggerModule } from 'nestjs-pino';
 import { randomUUID } from 'node:crypto';
@@ -10,6 +10,8 @@ import { validateEnv } from './config/env.validation';
 import { PrismaModule } from './prisma/prisma.module';
 import { JwtAuthGuard } from './common/guards/jwt-auth.guard';
 import { RolesGuard } from './common/guards/roles.guard';
+import { RevalidationService } from './common/revalidation.service';
+import { RevalidateInterceptor } from './common/interceptors/revalidate.interceptor';
 
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
@@ -18,6 +20,7 @@ import { CoursesModule } from './courses/courses.module';
 import { PostsModule } from './posts/posts.module';
 import { EventsModule } from './events/events.module';
 import { GraduatesModule } from './graduates/graduates.module';
+import { TestimonialsModule } from './testimonials/testimonials.module';
 import { SettingsModule } from './settings/settings.module';
 import { MediaModule } from './media/media.module';
 import { LeadsModule } from './leads/leads.module';
@@ -30,7 +33,7 @@ import { HealthModule } from './health/health.module';
       isGlobal: true,
       cache: true,
       validate: validateEnv,
-      load: [() => configuration(process.env)],
+      load: [configuration],
     }),
 
     // Structured logging with per-request ids. Secrets are redacted so tokens and
@@ -82,6 +85,7 @@ import { HealthModule } from './health/health.module';
     PostsModule,
     EventsModule,
     GraduatesModule,
+    TestimonialsModule,
     SettingsModule,
     MediaModule,
     LeadsModule,
@@ -92,6 +96,9 @@ import { HealthModule } from './health/health.module';
     { provide: APP_GUARD, useClass: ThrottlerGuard },
     { provide: APP_GUARD, useClass: JwtAuthGuard },
     { provide: APP_GUARD, useClass: RolesGuard },
+    // After a successful content mutation, tell the frontend to refresh (fire-and-forget).
+    RevalidationService,
+    { provide: APP_INTERCEPTOR, useClass: RevalidateInterceptor },
   ],
 })
 export class AppModule {}

@@ -4,22 +4,18 @@ A production-grade headless CMS for the Al-Fateem Academy website. NestJS + MySQ
 Prisma, documented with Swagger, secured with JWT/RBAC. It serves all site content and
 the per-section **"folds"** page model, and accepts the public form submissions.
 
-> **Delivery status — read this first.** This repository is **Phase 1 of 3**: the
-> complete backend API. It is code-complete and internally consistent. The two
-> remaining phases are separate deliverables:
+> **Delivery status.** All three phases are delivered and running:
 >
-> | Phase | Directory | Status |
+> | Phase | Where | Status |
 > |------|-----------|--------|
-> | 1. Backend API | `~/sites/academy-cms-api` (this repo) | **Delivered** |
-> | 2. Admin dashboard | `~/sites/academy-cms-admin` (custom Next.js app) | Not started |
-> | 3. Frontend integration (Option A / SSR-ISR) | `~/sites/alfateem-web` | Not started |
+> | 1. Backend API | this repo | **Delivered — runs locally, migrated + seeded** |
+> | 2. Admin dashboard | `alfateem-web` at **`/academy-admin`** (folded into the site app) | **Delivered** |
+> | 3. Frontend integration (Option A / SSR-ISR) | [`alfateem-web`](https://github.com/farhancss/afa-v2) | **Delivered** |
 >
-> **It has not been executed.** The environment this was authored in cannot reach the
-> npm registry, so `npm install`, `prisma generate/migrate`, and the test suite have
-> **not been run here**. The code was verified statically (Prisma schema parse, env
-> schema, seed-data generation, and TypeScript review). Treat the first `npm install
-> && npm run db:migrate:dev && npm run db:seed` on your machine as the real
-> compile/run gate and send back anything that surfaces.
+> The originally planned standalone `academy-cms-admin` project was superseded: the
+> admin now lives inside `alfateem-web` under `/academy-admin` and talks to this API.
+> Committed migrations live in `prisma/migrations/` — use `npm run db:migrate`
+> (deploy) on new environments, then `npm run db:seed`.
 
 ---
 
@@ -31,8 +27,8 @@ Confirmed with the owner up front:
   and run on a Node server, fetching from this API with ISR + an on-demand revalidate
   webhook. (Implemented in Phase 3.) This repo already exposes `FRONTEND_REVALIDATE_URL`
   / `REVALIDATE_SECRET` config for that webhook.
-- **Admin: a custom Next.js app** (Phase 2), not AdminJS. All admin actions go through
-  this versioned API + Swagger contract.
+- **Admin: a custom Next.js UI** (not AdminJS), shipped inside `alfateem-web` at
+  `/academy-admin`. All admin actions go through this versioned API + Swagger contract.
 - **Media: editable external URLs.** Image fields are URL strings; the existing
   WordPress URLs keep working. No upload/storage service runs. `MediaModule` validates
   URLs and documents the seam for adding local-disk/S3 uploads later.
@@ -58,10 +54,14 @@ Other assumptions: cuid string ids; the settings singleton is a single row keyed
 cp .env.example .env          # then edit secrets (see Env vars below)
 npm install
 npm run prisma:generate
-npm run db:migrate:dev        # creates tables from the schema (dev migration)
-npm run db:seed               # imports today's site content + the admin user
+npm run db:migrate            # applies the committed migrations (prisma/migrations/)
+npm run db:seed               # site content + admin user + real reviews + page folds
 npm run start:dev             # http://localhost:4000/api/v1  ·  docs at /docs
 ```
+
+Then start the frontend (`alfateem-web`: `npm run dev`) and log into the admin at
+`http://localhost:3000/academy-admin/login` with `SEED_ADMIN_EMAIL` /
+`SEED_ADMIN_PASSWORD`.
 
 ## Quick start (Docker — API + MySQL)
 
@@ -112,7 +112,9 @@ No secrets are committed; `.env` is gitignored and `.env.example` is the templat
 | `npm run build` / `start:prod` | Compile to `dist/` / run compiled |
 | `npm run db:migrate:dev` | Create + apply a dev migration |
 | `npm run db:migrate` | `prisma migrate deploy` (prod) |
-| `npm run db:seed` | Idempotent seed from `prisma/seed-data.json` |
+| `npm run db:seed` | Idempotent full seed from `prisma/seed-data.json` + `review-data.json` |
+| `npm run db:seed:pages` | Targeted upsert of the About + Contact page folds only |
+| `npm run db:seed:reviews` | Replace testimonials with the captured Google/Facebook reviews |
 | `npm run db:studio` | Prisma Studio |
 | `npm test` / `test:cov` | Unit tests (Jest) |
 | `npm run test:e2e` | e2e (needs a test DB — see Testing) |
@@ -194,23 +196,35 @@ npm run test:e2e
 
 ---
 
-## Frontend integration (Phase 3 — Option A, documented now)
+## Frontend integration (Phase 3 — Option A, DONE)
 
-When Phase 3 lands, `alfateem-web` changes as follows (no markup/design changes — only
-the data source):
+Applied in `alfateem-web` (no markup/design changes — only the data source):
 
-1. Remove `output: 'export'` from `next.config.mjs`; deploy on a Node runtime
-   (`next start`, e.g. Vercel or a VPS). Keep `images.unoptimized` (external URLs).
-2. Add a typed client in `src/lib/api/` wrapping these endpoints; mirror the DTO types.
-3. Replace the reads in `lib/site.ts` / `courses.ts` / `content.ts` with server-side
-   fetches in each page + `generateStaticParams`, using `revalidate` (ISR).
-4. Add a secured `POST /api/revalidate` route; the API calls it (`FRONTEND_REVALIDATE_URL`
+1. `output: 'export'` removed; the site runs on a Node runtime (`next start`).
+2. Typed client in `src/lib/api/` wrapping these endpoints, mirroring the DTO types,
+   with static fallback when the API is unreachable.
+3. Pages fetch server-side with ISR (`revalidate: 300`) + `generateStaticParams`.
+4. Secured `POST /api/revalidate` route; this API calls it (`FRONTEND_REVALIDATE_URL`
    + `REVALIDATE_SECRET`) on publish so edits appear within seconds.
-5. Point `RegisterForm.tsx` + the contact form at `POST /api/v1/leads/registrations`
-   and `/leads/contact`.
-6. Feed `schema.ts` (JSON-LD), sitemap, and robots from the API data.
+5. `RegisterForm` + `ContactForm` POST to `/api/v1/leads/registrations` and
+   `/leads/contact` (honeypot field `company`).
 
-New frontend env: `NEXT_PUBLIC_API_URL`, `REVALIDATE_SECRET`.
+Frontend env: `NEXT_PUBLIC_API_URL`, `REVALIDATE_SECRET`.
+
+---
+
+## Testimonials / reviews
+
+Student reviews are a moderated collection (`Testimonial` model; `approved` gates public
+visibility, `featured` surfaces highlights). Public `GET /testimonials` returns approved
+reviews (filter by `source`/`featured`); admin CRUD lives under `/testimonials/admin`.
+
+The real Google/Facebook reviews captured from the academy's listings live in
+`prisma/review-data.json`; `npm run db:seed:reviews` replaces the table with that file
+(it also runs as part of the full `db:seed`). There is **no live scraper** — both
+platforms bot-protect their review pages — so re-capture periodically or add new
+reviews from the admin at `/academy-admin/testimonials`. Note the seeder replaces the
+table as a set: merge admin-entered reviews into the JSON before re-running it.
 
 ---
 

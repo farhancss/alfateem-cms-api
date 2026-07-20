@@ -254,6 +254,44 @@ async function seedGraduates() {
   console.log(`✓ ${snapshot.graduates.length} graduates`);
 }
 
+// Real reviews captured from Google & Facebook (prisma/review-data.json). Regenerate
+// that file (or add new reviews from the admin) rather than editing inline; the
+// standalone `npm run db:seed:reviews` runs just this step.
+type ReviewSeed = {
+  author: string;
+  role: string | null;
+  quote: string;
+  rating: number;
+  source: 'GOOGLE' | 'FACEBOOK' | 'MANUAL' | 'WEBSITE';
+  sourceUrl: string | null;
+  avatar: string | null;
+  reviewedAt: string | null;
+  featured: boolean;
+};
+
+async function seedTestimonials() {
+  const { reviews } = JSON.parse(
+    readFileSync(join(__dirname, 'review-data.json'), 'utf8'),
+  ) as { reviews: ReviewSeed[] };
+  await prisma.testimonial.deleteMany();
+  await prisma.testimonial.createMany({
+    data: reviews.map((t, i) => ({
+      author: t.author,
+      role: t.role,
+      quote: t.quote,
+      rating: t.rating,
+      source: t.source,
+      sourceUrl: t.sourceUrl,
+      avatar: t.avatar,
+      reviewedAt: t.reviewedAt ? new Date(t.reviewedAt) : null,
+      featured: t.featured,
+      approved: true,
+      order: i,
+    })),
+  });
+  console.log(`\u2713 ${reviews.length} testimonials (from review-data.json)`);
+}
+
 /** Replace a page and its sections atomically (idempotent). */
 async function upsertPage(
   key: string,
@@ -346,6 +384,16 @@ async function seedPages() {
         },
       },
       {
+        type: 'testimonials',
+        data: {
+          eyebrow: 'Reviews',
+          title: 'What our graduates say',
+          body: 'Real reviews from students on Google and Facebook. These are the people who trusted us with their start in web development.',
+          featuredOnly: true,
+          limit: 6,
+        },
+      },
+      {
         type: 'faq',
         data: { eyebrow: 'FAQ', title: 'Questions we get asked most', items: FAQ },
       },
@@ -394,6 +442,15 @@ async function seedPages() {
         },
       },
       {
+        type: 'testimonials',
+        data: {
+          eyebrow: 'Reviews',
+          title: 'Trusted by our students',
+          body: 'What people say about learning at the academy.',
+          limit: 6,
+        },
+      },
+      {
         type: 'cta',
         data: {
           eyebrow: 'Admissions open',
@@ -429,7 +486,7 @@ async function seedPages() {
     ],
   );
 
-  console.log('✓ pages: home (9 folds), about (3), contact (1)');
+  console.log('✓ pages: home (10 folds), about (4), contact (1)');
 }
 
 async function main() {
@@ -440,6 +497,7 @@ async function main() {
   await seedPosts();
   await seedEvents();
   await seedGraduates();
+  await seedTestimonials();
   await seedPages();
   console.log('Seed complete.');
 }

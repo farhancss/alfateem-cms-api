@@ -36,8 +36,10 @@ async function bootstrap() {
   app.use(json({ limit: '1mb' }));
   app.use(urlencoded({ extended: true, limit: '1mb' }));
 
-  // All routes under /api/v1.
-  app.setGlobalPrefix('api/v1');
+  // All routes under /api/v1. The global prefix supplies `api`; URI versioning
+  // appends the `v1` segment (defaultVersion), giving `/api/v1/...`. Setting the
+  // prefix to `api/v1` here would double the version to `/api/v1/v1/...`.
+  app.setGlobalPrefix('api');
   app.enableVersioning({ type: VersioningType.URI, defaultVersion: '1' });
 
   // Global validation: strip unknown props, reject extras, transform to DTO types.
