@@ -1,0 +1,51 @@
+# Local/prod parity: API + MySQL. The admin dashboard (academy-cms-admin) and the
+# public site (alfateem-web) are separate apps and run independently; add them here
+# if you want the whole stack under one compose file.
+services:
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-academy_cms}
+      MYSQL_USER: ${MYSQL_USER:-cms}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-cms_password}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-change_me_root_password}
+    ports:
+      - '3306:3306'
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      # API waits for this before running migrations.
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost', '-p${MYSQL_ROOT_PASSWORD:-change_me_root_password}']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  api:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      # Inside the compose network the DB host is the service name `db`.
+      DATABASE_URL: mysql://${MYSQL_USER:-cms}:${MYSQL_PASSWORD:-cms_password}@db:3306/${MYSQL_DATABASE:-academy_cms}
+      JWT_ACCESS_SECRET: ${JWT_ACCESS_SECRET}
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET}
+      JWT_ACCESS_TTL: ${JWT_ACCESS_TTL:-900}
+      JWT_REFRESH_TTL: ${JWT_REFRESH_TTL:-1209600}
+      SEED_ADMIN_EMAIL: ${SEED_ADMIN_EMAIL:-admin@alfateemacademy.com}
+      SEED_ADMIN_PASSWORD: ${SEED_ADMIN_PASSWORD:-ChangeMe_Strong_Passw0rd!}
+      SEED_ADMIN_NAME: ${SEED_ADMIN_NAME:-Site Administrator}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000,http://localhost:3001}
+      APP_URL: ${APP_URL:-http://localhost:4000}
+      SWAGGER_ENABLED: ${SWAGGER_ENABLED:-true}
+      FRONTEND_REVALIDATE_URL: ${FRONTEND_REVALIDATE_URL:-}
+      REVALIDATE_SECRET: ${REVALIDATE_SECRET:-}
+    ports:
+      - '4000:4000'
+
+volumes:
+  db_data:

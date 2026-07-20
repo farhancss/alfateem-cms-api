@@ -1,0 +1,830 @@
+{
+  "site": {
+    "name": "Al-Fateem Academy",
+    "legalName": "Al-Fateem Academy",
+    "tagline": "Learn Today, Lead Tomorrow",
+    "url": "https://www.alfateemacademy.com",
+    "founded": "2008",
+    "description": "Al-Fateem Academy is a web development institute in Karachi training full-stack developers since 2008. Learn HTML5, CSS3, JavaScript, TypeScript, React, Next.js, PHP, Laravel, WordPress and AI automation with hands-on, job-focused instruction.",
+    "contact": {
+      "email": "info@alfateemacademy.com",
+      "phones": [
+        "+92 322 3411811",
+        "+92 335 2646886"
+      ],
+      "address": {
+        "street": "Office #91, Falak Corporate City, Near Pakistan Post Office",
+        "city": "Karachi",
+        "region": "Sindh",
+        "country": "PK"
+      }
+    },
+    "social": {
+      "facebook": "https://www.facebook.com/AlFateemAcademyOfficial/",
+      "twitter": "https://twitter.com/alfateemacademy",
+      "youtube": "https://www.youtube.com/channel/UCiu_3M7PBANiRwdlwhQ_Ivg",
+      "linkedin": "https://www.linkedin.com/school/alfateemacademyofficial/"
+    },
+    "twitterHandle": "@alfateemacademy"
+  },
+  "media": {
+    "logo": "https://www.alfateemacademy.com/wp-content/uploads/2018/11/logo.png",
+    "logoSquare": "https://www.alfateemacademy.com/wp-content/uploads/2018/11/cropped-logo-270x270.png",
+    "ceo": "https://www.alfateemacademy.com/wp-content/uploads/2019/03/ayaz-ahmed-mast.jpg",
+    "graduates": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student",
+    "eventPlaceholder": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/post.jpg",
+    "gallery": "https://www.alfateemacademy.com/wp-content/gallery",
+    "uploads": "https://www.alfateemacademy.com/wp-content/uploads"
+  },
+  "nav": [
+    {
+      "label": "Courses",
+      "href": "/courses/",
+      "hasMegaMenu": true
+    },
+    {
+      "label": "About",
+      "href": "/about/"
+    },
+    {
+      "label": "Our Graduates",
+      "href": "/our-proud-students/"
+    },
+    {
+      "label": "Events",
+      "href": "/events/"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog/"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact/"
+    }
+  ],
+  "stats": [
+    {
+      "value": 3500,
+      "suffix": "+",
+      "label": "Graduates placed in jobs"
+    },
+    {
+      "value": 17,
+      "suffix": " yrs",
+      "label": "Training since 2008"
+    },
+    {
+      "value": 9,
+      "suffix": "",
+      "label": "Industry-aligned courses"
+    },
+    {
+      "value": 100,
+      "suffix": "%",
+      "label": "Practical, project-based"
+    }
+  ],
+  "courses": [
+    {
+      "slug": "web-development",
+      "title": "Web Development Foundations",
+      "short": "Web Dev",
+      "track": "Frontend",
+      "level": "Beginner",
+      "duration": "3 months",
+      "summary": "Build a strong base in web development with HTML5, CSS3, and modern styling frameworks like Bootstrap and Tailwind. Master version control with Git and GitHub, and create responsive, accessible layouts that work across every device.",
+      "stack": [
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "Tailwind CSS",
+        "Git",
+        "GitHub"
+      ],
+      "lessons": [
+        {
+          "title": "HTML5 / CSS3",
+          "slug": "html5-css3",
+          "blurb": "Learn to build your first website from scratch. Semantic HTML5, modern CSS3 layout with Flexbox and Grid, and the fundamentals every developer needs before anything else."
+        },
+        {
+          "title": "Bootstrap Development",
+          "slug": "bootstrap-development",
+          "blurb": "Bootstrap is one of the most widely deployed component frameworks in the industry. Build interfaces that behave consistently across all browsers and screen sizes."
+        },
+        {
+          "title": "Git & GitHub",
+          "slug": "git-github",
+          "blurb": "Version control from zero. Branching, merging, pull requests, and the collaboration workflow every professional team expects you to already know on day one."
+        },
+        {
+          "title": "Tailwind CSS",
+          "slug": "tailwind-css",
+          "blurb": "The utility-first framework behind most modern product interfaces. Design tokens, responsive variants, and building a maintainable design system."
+        }
+      ],
+      "seoTitle": "Web Development Course in Karachi | Al-Fateem Academy",
+      "seoDescription": "Learn web development in Karachi from scratch. HTML5, CSS3, Bootstrap, Tailwind, Git and GitHub taught through hands-on projects. Enrol at Al-Fateem Academy."
+    },
+    {
+      "slug": "javascript",
+      "title": "JavaScript Programming",
+      "short": "JavaScript",
+      "track": "Frontend",
+      "level": "Beginner",
+      "duration": "2 months",
+      "summary": "Learn the language that runs the web. Master modern JavaScript from the ground up — variables, functions, the DOM, events, async programming, fetch, and ES6+ features — then apply it by building real interactive applications.",
+      "stack": [
+        "ES6+",
+        "DOM APIs",
+        "Async / Await",
+        "Fetch",
+        "JSON",
+        "npm"
+      ],
+      "lessons": [
+        {
+          "title": "Core JavaScript & ES6+",
+          "slug": "core-javascript",
+          "blurb": "Types, scope, closures, array methods, destructuring, modules. The language fundamentals that everything else is built on."
+        },
+        {
+          "title": "DOM & Events",
+          "slug": "dom-events",
+          "blurb": "Select, traverse, and manipulate the DOM. Handle events, delegate efficiently, and build interfaces that respond instantly."
+        },
+        {
+          "title": "Async JavaScript & APIs",
+          "slug": "async-javascript",
+          "blurb": "Promises, async/await, error handling, and consuming REST APIs with fetch — the skills behind every data-driven interface."
+        }
+      ],
+      "seoTitle": "JavaScript Course in Karachi | Al-Fateem Academy",
+      "seoDescription": "Master modern JavaScript in Karachi. ES6+, the DOM, async programming and real API integration, taught project-first at Al-Fateem Academy."
+    },
+    {
+      "slug": "typescript",
+      "title": "TypeScript",
+      "short": "TypeScript",
+      "track": "Frontend",
+      "level": "Intermediate",
+      "duration": "1 month",
+      "summary": "Extend your JavaScript with TypeScript — types, interfaces, generics, and advanced type-level programming. Write cleaner, scalable, error-resistant code for large applications and prepare for enterprise-level development.",
+      "stack": [
+        "TypeScript",
+        "Interfaces",
+        "Generics",
+        "Type Guards",
+        "tsconfig"
+      ],
+      "lessons": [
+        {
+          "title": "Types & Interfaces",
+          "slug": "types-interfaces",
+          "blurb": "Primitives, unions, interfaces, and type aliases. Model your data so the compiler catches bugs before your users do."
+        },
+        {
+          "title": "Generics & Advanced Types",
+          "slug": "generics-advanced-types",
+          "blurb": "Generics, utility types, conditional types, and narrowing. Write reusable abstractions that stay type-safe."
+        }
+      ],
+      "seoTitle": "TypeScript Course in Karachi | Al-Fateem Academy",
+      "seoDescription": "Learn TypeScript in Karachi — types, interfaces, generics and advanced patterns for building maintainable, enterprise-grade applications."
+    },
+    {
+      "slug": "react-nextjs",
+      "title": "React & Next.js",
+      "short": "React / Next.js",
+      "track": "Frontend",
+      "level": "Advanced",
+      "duration": "2 months",
+      "summary": "Build modern frontend applications with React and Next.js. Components, hooks, state management, routing, and server-side rendering. Create fast, scalable, SEO-friendly applications using the exact stack top companies hire for.",
+      "stack": [
+        "React 19",
+        "Next.js",
+        "Hooks",
+        "SSR / SSG",
+        "App Router",
+        "Server Components"
+      ],
+      "lessons": [
+        {
+          "title": "React Fundamentals",
+          "slug": "react-fundamentals",
+          "blurb": "Components, props, state, and the hooks model. Think in components and compose interfaces that scale."
+        },
+        {
+          "title": "State & Data Fetching",
+          "slug": "state-data-fetching",
+          "blurb": "Context, reducers, and modern data-fetching patterns. Manage complex application state without the mess."
+        },
+        {
+          "title": "Next.js & Rendering",
+          "slug": "nextjs-rendering",
+          "blurb": "App Router, server components, SSR, SSG and ISR. Ship applications that are fast for users and legible to search engines."
+        }
+      ],
+      "seoTitle": "React & Next.js Course in Karachi | Al-Fateem Academy",
+      "seoDescription": "Learn React and Next.js in Karachi. Hooks, state management, server components and SSR — build the fast, SEO-friendly apps employers hire for."
+    },
+    {
+      "slug": "php-programming",
+      "title": "Backend Development — PHP & Node.js",
+      "short": "Backend / PHP",
+      "track": "Backend",
+      "level": "Intermediate",
+      "duration": "3 months",
+      "summary": "Learn server-side development with PHP and Node.js. Work with Laravel and Express to build secure, scalable applications. Understand routing, authentication, and API design so you can own the backend end-to-end.",
+      "stack": [
+        "PHP 8",
+        "Laravel",
+        "Node.js",
+        "Express",
+        "REST APIs",
+        "Auth"
+      ],
+      "lessons": [
+        {
+          "title": "PHP & Laravel",
+          "slug": "php-laravel",
+          "blurb": "Modern PHP, Eloquent ORM, routing, middleware, and Laravel conventions for building production applications."
+        },
+        {
+          "title": "Node.js & Express",
+          "slug": "nodejs-express",
+          "blurb": "The JavaScript runtime on the server. Build REST APIs with Express, handle middleware, and structure a real service."
+        },
+        {
+          "title": "Authentication & Security",
+          "slug": "authentication-security",
+          "blurb": "Sessions, JWT, hashing, and the OWASP issues that matter. Ship backends that do not leak."
+        }
+      ],
+      "seoTitle": "PHP & Laravel Backend Course in Karachi | Al-Fateem Academy",
+      "seoDescription": "Learn backend development in Karachi with PHP, Laravel, Node.js and Express. Build secure REST APIs and full server-side applications."
+    },
+    {
+      "slug": "database",
+      "title": "Databases — MySQL & MongoDB",
+      "short": "Database",
+      "track": "Data",
+      "level": "Intermediate",
+      "duration": "1 month",
+      "summary": "Understand how to store, manage, and retrieve data with MySQL and MongoDB. Learn database design, queries, relationships, indexing, and optimisation — then integrate them into real applications.",
+      "stack": [
+        "MySQL",
+        "MongoDB",
+        "SQL",
+        "Schema Design",
+        "Indexing",
+        "Aggregation"
+      ],
+      "lessons": [
+        {
+          "title": "Relational Design & SQL",
+          "slug": "relational-sql",
+          "blurb": "Normalisation, relationships, joins, and writing queries that stay fast as your tables grow."
+        },
+        {
+          "title": "MongoDB & NoSQL",
+          "slug": "mongodb-nosql",
+          "blurb": "Document modelling, aggregation pipelines, and knowing when NoSQL is genuinely the right call."
+        }
+      ],
+      "seoTitle": "MySQL & MongoDB Database Course in Karachi | Al-Fateem",
+      "seoDescription": "Learn database design in Karachi. MySQL, MongoDB, schema modelling, queries, indexing and optimisation for real applications."
+    },
+    {
+      "slug": "wordpress-development",
+      "title": "WordPress Development",
+      "short": "WordPress",
+      "track": "Platform",
+      "level": "Beginner",
+      "duration": "2 months",
+      "summary": "Build professional websites with WordPress from scratch. Develop custom themes, create plugins, and design with Elementor. Built for freelancing and client work — deliver high-quality sites quickly and profitably.",
+      "stack": [
+        "WordPress",
+        "Custom Themes",
+        "Plugins",
+        "Elementor",
+        "WooCommerce",
+        "PHP"
+      ],
+      "lessons": [
+        {
+          "title": "Custom Theme Development",
+          "slug": "custom-theme-development",
+          "blurb": "The template hierarchy, the loop, hooks and filters. Build a theme from a blank folder rather than fighting someone else’s."
+        },
+        {
+          "title": "Plugins & Elementor",
+          "slug": "plugins-elementor",
+          "blurb": "Write your own plugins, extend existing ones, and use Elementor to deliver client sites in days instead of weeks."
+        }
+      ],
+      "seoTitle": "WordPress Development Course in Karachi | Al-Fateem",
+      "seoDescription": "Learn WordPress development in Karachi. Custom themes, plugins, Elementor and WooCommerce — built for freelancing and client work."
+    },
+    {
+      "slug": "ai-automation",
+      "title": "AI & Automation",
+      "short": "AI Automation",
+      "track": "AI",
+      "level": "Beginner",
+      "duration": "1 month",
+      "summary": "Work fluently with AI tools like ChatGPT, Claude and Gemini. Learn prompt engineering, and automate real workflows with Zapier, Make and n8n. Increase your output and build smart solutions clients will pay for.",
+      "stack": [
+        "Prompt Engineering",
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Zapier",
+        "n8n"
+      ],
+      "lessons": [
+        {
+          "title": "Prompt Engineering",
+          "slug": "prompt-engineering",
+          "blurb": "Structure, context, examples and iteration. Get reliable output from models instead of hoping for it."
+        },
+        {
+          "title": "Workflow Automation",
+          "slug": "workflow-automation",
+          "blurb": "Chain tools together with Zapier, Make and n8n. Turn repetitive manual work into systems that run themselves."
+        }
+      ],
+      "seoTitle": "AI & Automation Course in Karachi | Al-Fateem Academy",
+      "seoDescription": "Learn AI and automation in Karachi. Prompt engineering with ChatGPT, Claude and Gemini, plus workflow automation using Zapier and n8n."
+    },
+    {
+      "slug": "deployment",
+      "title": "Deployment & Hosting",
+      "short": "Deployment",
+      "track": "Platform",
+      "level": "Intermediate",
+      "duration": "2 weeks",
+      "summary": "Take your work live. Understand hosting, domains, DNS, subdomains, SSL and CI/CD. Cover the full process of shipping a project to production and maintaining it for clients or yourself.",
+      "stack": [
+        "Vercel",
+        "cPanel",
+        "DNS",
+        "SSL",
+        "CI/CD",
+        "Domains"
+      ],
+      "lessons": [
+        {
+          "title": "Hosting, Domains & DNS",
+          "slug": "hosting-domains-dns",
+          "blurb": "How domains resolve, how to configure records, and how to get a project onto a real URL with SSL."
+        },
+        {
+          "title": "CI/CD & Going Live",
+          "slug": "ci-cd",
+          "blurb": "Automated deploys from Git, environment variables, preview builds, and rolling back when it goes wrong."
+        }
+      ],
+      "seoTitle": "Web Deployment & Hosting Course in Karachi | Al-Fateem",
+      "seoDescription": "Learn to deploy websites in Karachi. Hosting, domains, DNS, SSL and CI/CD — take projects from your laptop to production."
+    }
+  ],
+  "graduates": [
+    {
+      "name": "Ahmed Saleem",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/2023/01.jpg",
+      "role": "Frontend Developer",
+      "year": 2023
+    },
+    {
+      "name": "Absar",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/2023/02.jpg",
+      "role": "WordPress Developer",
+      "year": 2023
+    },
+    {
+      "name": "Aqib Shahzad",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/2023/03.jpg",
+      "role": "Full-Stack Developer",
+      "year": 2023
+    },
+    {
+      "name": "Asif",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/asif-2025.jpeg",
+      "role": "React Developer",
+      "year": 2025
+    },
+    {
+      "name": "Ahmed Raza",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/2023/05.jpg",
+      "role": "Backend Developer",
+      "year": 2023
+    },
+    {
+      "name": "Bilal Ahmed",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/2023/06.jpg",
+      "role": "Laravel Developer",
+      "year": 2023
+    },
+    {
+      "name": "Arfat",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/2023/07.jpg",
+      "role": "Frontend Developer",
+      "year": 2023
+    },
+    {
+      "name": "Fahim",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/2023/08.jpg",
+      "role": "Full-Stack Developer",
+      "year": 2023
+    },
+    {
+      "name": "Hanzala",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/2023/09.jpg",
+      "role": "WordPress Developer",
+      "year": 2023
+    },
+    {
+      "name": "Hassan Anwar",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/2023/10.jpg",
+      "role": "PHP Developer",
+      "year": 2023
+    },
+    {
+      "name": "Maaz Shahid",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/2023/11.jpg",
+      "role": "Frontend Developer",
+      "year": 2023
+    },
+    {
+      "name": "Mubashir Asif",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/2023/12.jpg",
+      "role": "Full-Stack Developer",
+      "year": 2023
+    },
+    {
+      "name": "Muhammad Shaheer",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/2023/13.jpg",
+      "role": "React Developer",
+      "year": 2023
+    },
+    {
+      "name": "Muhammad Zaid",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/2023/14.jpg",
+      "role": "Backend Developer",
+      "year": 2023
+    },
+    {
+      "name": "Raza Bangi",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/2023/15.jpg",
+      "role": "WordPress Developer",
+      "year": 2023
+    },
+    {
+      "name": "Ribal",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/2023/16.jpg",
+      "role": "Frontend Developer",
+      "year": 2023
+    },
+    {
+      "name": "Saad Khanna",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/2023/17.jpg",
+      "role": "Full-Stack Developer",
+      "year": 2023
+    },
+    {
+      "name": "Saad Saleem",
+      "image": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/job-student/2023/18.jpg",
+      "role": "PHP Developer",
+      "year": 2023
+    }
+  ],
+  "posts": [
+    {
+      "title": "How To Secure Your WordPress Website From Hackers",
+      "slug": "how-to-secure-your-wordpress-website-from-hackers",
+      "category": "Technology",
+      "categorySlug": "technology",
+      "image": "https://www.alfateemacademy.com/wp-content/uploads/2021/06/blog-01.jpg",
+      "excerpt": "WordPress powers a huge share of the web, which makes it a standing target. A practical walkthrough of the hardening steps that actually matter.",
+      "date": "2021-06-25",
+      "readingTime": "2 min read",
+      "body": [
+        {
+          "type": "p",
+          "text": "WordPress is a CMS — a content management system. It is free and open source, and it is used by millions of people. WordPress works well for a wide range of sites: whether you are using it for blogging or for an eCommerce business, it is an ideal platform. Al-Fateem Academy offers a WordPress development course in Karachi that covers preventing the hacks described below."
+        },
+        {
+          "type": "h2",
+          "text": "How to secure WordPress"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Choose strong passwords. An attacker will go for the admin login first, so avoid reusing a password from any other site. Pick something long that cannot be guessed or found in a breach dump.",
+            "Keep your WordPress core, themes and plugins up to date. This alone closes the majority of the openings attackers rely on.",
+            "Restrict user access. WordPress sites often accumulate accounts, especially when you work with a group — and every extra account is another password that might be weak. Give each user only the access their role needs, and remove accounts you no longer use.",
+            "Put a firewall in front of the site. With a firewall in place, even a delayed update is less likely to be exploited immediately.",
+            "Set up automated backups. A backup does not prevent a compromise, but it is the difference between an afternoon of restoring and losing the site."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "What people build with WordPress"
+        },
+        {
+          "type": "h3",
+          "text": "Blogging"
+        },
+        {
+          "type": "p",
+          "text": "Many people use online platforms to share their ideas and thoughts. Blogging is the clearest example — a WordPress site used to publish written content, pictures and video to an online audience."
+        },
+        {
+          "type": "h3",
+          "text": "Business websites"
+        },
+        {
+          "type": "p",
+          "text": "With an online store you can sell and buy directly. Businesses use WordPress to create the content that attracts customers, displaying and promoting the features of their products."
+        }
+      ]
+    },
+    {
+      "title": "Defining Default Password Validation Rules in Laravel",
+      "slug": "defining-default-password-validation-rules-in-laravel-8",
+      "category": "Technology",
+      "categorySlug": "technology",
+      "image": "https://www.alfateemacademy.com/wp-content/uploads/2021/06/blog.jpg",
+      "excerpt": "Laravel lets you define password rules once and apply them everywhere. Here is how to set a sane default across your whole application.",
+      "date": "2021-06-01",
+      "readingTime": "1 min read",
+      "body": [
+        {
+          "type": "p",
+          "text": "The Password validation rule object in Laravel 8.43 lets you set default password rules that can be used across your application. Defining them once in a service provider centralises the password validation behaviour you expect, rather than repeating the same chain of rules at every call site."
+        },
+        {
+          "type": "h2",
+          "text": "Define the defaults in a service provider"
+        },
+        {
+          "type": "code",
+          "lang": "php",
+          "code": "use Illuminate\\Validation\\Rules\\Password;\n\n/**\n * Bootstrap any application services.\n *\n * @return void\n */\npublic function boot()\n{\n    Password::defaults(function () {\n        return Password::min(8)\n            ->mixedCase()\n            ->uncompromised();\n    });\n}"
+        },
+        {
+          "type": "h2",
+          "text": "Use them in a validator"
+        },
+        {
+          "type": "p",
+          "text": "Once the defaults are registered, Password::defaults() returns them anywhere you validate:"
+        },
+        {
+          "type": "code",
+          "lang": "php",
+          "code": "use Illuminate\\Validation\\Rules\\Password;\n\n$request->validate([\n    'password' => ['required', Password::defaults()],\n]);"
+        },
+        {
+          "type": "p",
+          "text": "The password rule gives you practical conventions for enforcing strong passwords, including uncompromised(), which checks the password against known data breaches so a password that has already leaked is rejected outright."
+        }
+      ]
+    },
+    {
+      "title": "Google Analytics Integration In WooCommerce",
+      "slug": "google-analytics-integration-woocommerce",
+      "category": "Digital Marketing",
+      "categorySlug": "digital-marketing",
+      "image": "https://www.alfateemacademy.com/wp-content/uploads/2021/03/Google-Analytics-Integration-In-WooCommerce.jpg",
+      "excerpt": "Connect WooCommerce to Google Analytics properly, so your revenue, funnel and product data actually reconcile with your store.",
+      "date": "2021-03-18",
+      "readingTime": "5 min read",
+      "body": [
+        {
+          "type": "h2",
+          "text": "Introduction"
+        },
+        {
+          "type": "p",
+          "text": "One of the most effective ways to grow an online business is to actually measure it. Connecting Google Analytics to WooCommerce turns your store from a black box into something you can reason about — what sells, what does not, and where people give up."
+        },
+        {
+          "type": "p",
+          "text": "In this post, Al-Fateem Academy walks through everything needed to integrate Google Analytics with WooCommerce."
+        },
+        {
+          "type": "h2",
+          "text": "What this covers"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Plugin installation",
+            "Plugin configuration — global site tag, standard tracking, advertising network, enhanced link attribution, anonymising IP addresses, 404 tracking, transactions, and add-to-cart",
+            "Conversion tracking in Google Analytics"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "1. Plugin installation"
+        },
+        {
+          "type": "p",
+          "text": "Installation is the first step. Prefer plugins built by WooCommerce itself, or ones WooCommerce explicitly recommends — they track the platform’s own changes and break less often. The WooCommerce Google Analytics Integration plugin is the obvious starting point."
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Open your WordPress admin dashboard.",
+            "Go to Plugins.",
+            "Click Add New.",
+            "Search for your plugin.",
+            "Install and activate it."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "A message appears above the plugin list once it is active. Follow it and installation is done."
+        },
+        {
+          "type": "h2",
+          "text": "2. Plugin configuration"
+        },
+        {
+          "type": "p",
+          "text": "Click \"Connect WooCommerce to Google Analytics\" to go straight to the plugin settings, then work through the following."
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Get your Google Analytics ID from the Analytics home dashboard.",
+            "On the dashboard, click Admin in the bottom left-hand corner.",
+            "Add a new account or property, depending on how your Analytics is structured.",
+            "Name the account and create a new property.",
+            "Choose Web — not iOS or Android, which are for app tracking. WooCommerce is a web app.",
+            "Add your website URL.",
+            "Copy the tracking ID into the plugin settings in your WordPress admin.",
+            "Check the \"Enable standard tracking\" box.",
+            "Enable Enhanced Ecommerce for deeper reports.",
+            "Save settings."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Your store is now connected. Several options are set by default during that process, and they are worth understanding rather than leaving alone."
+        },
+        {
+          "type": "h3",
+          "text": "Global site tag"
+        },
+        {
+          "type": "p",
+          "text": "Enables the global site tag. The gtag.js framework then powers both Google Analytics 4 and Universal Analytics tracking."
+        },
+        {
+          "type": "h3",
+          "text": "Standard tracking"
+        },
+        {
+          "type": "p",
+          "text": "Check this if you are not already using another plugin to add standard Google Analytics. Two plugins both injecting Analytics will double-count everything."
+        },
+        {
+          "type": "h3",
+          "text": "Advertising network"
+        },
+        {
+          "type": "p",
+          "text": "Check this if you run Google Ads and want to track results. It reports through the Analytics side as well as the Ads dashboard."
+        },
+        {
+          "type": "h3",
+          "text": "Enhanced link attribution"
+        },
+        {
+          "type": "p",
+          "text": "Leave this unchecked if you are a beginner. It improves in-page analytics reports by distinguishing between multiple links to the same URL on one page, using link element IDs — but reading the output requires a deeper understanding of Analytics."
+        },
+        {
+          "type": "h3",
+          "text": "Anonymising IP addresses"
+        },
+        {
+          "type": "p",
+          "text": "Mandatory in some countries for privacy reasons. Analytics zeroes the last octet of IPv4 addresses and the last 80 bits of IPv6 addresses in memory, immediately after they reach the collection network."
+        },
+        {
+          "type": "h3",
+          "text": "404 error tracking"
+        },
+        {
+          "type": "p",
+          "text": "Tracks the error pages your visitors hit. This is the cheapest way to find broken and dead links — particularly useful after you delete a product and want to know whether people are still trying to reach it, so you can 301 them to a similar product or category."
+        },
+        {
+          "type": "h3",
+          "text": "Transactions"
+        },
+        {
+          "type": "p",
+          "text": "Check this to track transactions, revenue, refunds, shipping, tax and other financial metrics. Note that WooCommerce needs a supported payment gateway add-on — PayPal Checkout, Stripe, Square, Braintree and similar. Without a gateway, transactions are not tracked at all."
+        },
+        {
+          "type": "h3",
+          "text": "Add to cart"
+        },
+        {
+          "type": "p",
+          "text": "Fires an event whenever a visitor adds a product to the cart. This is what makes drop-off analysis possible — you can see where in the funnel people stop."
+        },
+        {
+          "type": "h2",
+          "text": "3. Conversion tracking"
+        },
+        {
+          "type": "p",
+          "text": "The two metrics worth following closely are conversion rate and drop-off pages, and neither requires going deep into Analytics."
+        },
+        {
+          "type": "p",
+          "text": "Once your account settings are in place, create a specific event: look for Conversions in the left-hand sidebar and define it there."
+        },
+        {
+          "type": "p",
+          "text": "Drop-off pages are the pages a visitor reached without making a purchase — also known as checkout behaviour analysis. Enabling Enhanced Ecommerce gives you the drop-off rate directly."
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "title": "14th Year Success Event",
+      "slug": "event-2023-14th-year-celebration",
+      "date": "2023-06-10",
+      "blurb": "Al-Fateem Academy marked fourteen years of training web developers in Karachi, celebrating with the students, graduates and families who make up the academy.",
+      "cover": "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-6.jpg",
+      "images": [
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-4.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-5.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-6.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-7.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-8.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-9.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-10.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-11.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-12.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-13.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-14.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-15.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-16.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-17.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-18.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-19.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-20.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-21.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-22.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-23.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-24.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-91.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-92.jpg",
+        "https://www.alfateemacademy.com/wp-content/gallery/14-year-celebration-2023/event-2023-94.jpg"
+      ]
+    },
+    {
+      "title": "9th Year Success Event",
+      "slug": "9th-year-success-event-held-on-08th-feb-2018",
+      "date": "2018-02-08",
+      "blurb": "Nine years of the academy, celebrated with the graduating cohort and the wider Al-Fateem community.",
+      "cover": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/post.jpg",
+      "images": []
+    },
+    {
+      "title": "8th Year of Celebration Event",
+      "slug": "8th-year-of-celebration-event-held-on-20th-feb-2017",
+      "date": "2017-02-20",
+      "blurb": "The academy’s eighth-year celebration, recognising the students who completed their training that year.",
+      "cover": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/post.jpg",
+      "images": []
+    }
+  ],
+  "pillars": [
+    {
+      "title": "Polishing Your Practical Skills",
+      "body": "As a pioneer IT talent development hub, our classes carry a strong practical focus. You build real projects, not toy exercises, so you leave with work you can show an employer.",
+      "metric": "Project-based"
+    },
+    {
+      "title": "World-Class Global Curriculum",
+      "body": "We incorporate the latest and most accurate technologies into every course outline. Our trainers revise the syllabus continuously against real industry requirements, so you stay ahead of the curve.",
+      "metric": "Updated continuously"
+    },
+    {
+      "title": "Over 3,500 Satisfied Job Holders",
+      "body": "We take pride in boosting the careers of countless students across the IT industry ever since the academy's inception in 2008. Our graduates are the strongest argument we have.",
+      "metric": "3,500+ placed"
+    }
+  ]
+}

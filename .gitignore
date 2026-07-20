@@ -1,0 +1,31 @@
+# dependencies
+/node_modules
+
+# build
+/dist
+*.tsbuildinfo
+
+# env — never commit secrets
+.env
+.env.*.local
+.env.local
+
+# prisma generated client
+/prisma/generated
+
+# logs
+*.log
+logs
+
+# test / coverage
+/coverage
+.nyc_output
+
+# os / editor
+.DS_Store
+.idea
+.vscode/*
+!.vscode/extensions.json
+
+# uploads (if local media driver is ever enabled)
+/uploads
