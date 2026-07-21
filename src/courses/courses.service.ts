@@ -96,11 +96,13 @@ export class CoursesService {
     await this.prisma.lesson.delete({ where: { id: lessonId } });
   }
 
-  /** All lessons flattened with their parent course — powers /lesson/[slug] pages. */
+  /** All lessons flattened with their parent course — powers /lesson/[slug] pages.
+   *  The course must carry its own lessons (same shape as findLessonBySlug): the
+   *  frontend's course mapper reads course.lessons and throws without it. */
   listAllLessons() {
     return this.prisma.lesson.findMany({
       orderBy: { order: 'asc' },
-      include: { course: true },
+      include: { course: { include: { lessons: { orderBy: { order: 'asc' } } } } },
     });
   }
 

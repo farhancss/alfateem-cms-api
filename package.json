@@ -24,7 +24,8 @@
     "db:seed:pages": "ts-node --compiler-options '{\"module\":\"CommonJS\"}' prisma/seed-pages.ts",
     "db:reset": "prisma migrate reset --force",
     "db:studio": "prisma studio",
-    "db:seed:reviews": "ts-node --compiler-options '{\"module\":\"CommonJS\"}' prisma/seed-reviews.ts"
+    "db:seed:reviews": "ts-node --compiler-options '{\"module\":\"CommonJS\"}' prisma/seed-reviews.ts",
+    "postinstall": "prisma generate"
   },
   "prisma": {
     "seed": "ts-node --compiler-options '{\"module\":\"CommonJS\"}' prisma/seed.ts"
