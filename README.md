@@ -1,6 +1,6 @@
 # Al-Fateem Academy — Headless CMS API
 
-A production-grade headless CMS for the Al-Fateem Academy website. NestJS + PostgreSQL +
+A production-grade headless CMS for the Al-Fateem Academy website. NestJS + MySQL +
 Prisma, documented with Swagger, secured with JWT/RBAC. It serves all site content and
 the per-section **"folds"** page model, and accepts the public form submissions.
 
@@ -35,7 +35,7 @@ Confirmed with the owner up front:
 - **Notifications: log-only.** New submissions are stored and shown in the admin inbox;
   no email is sent. A `Notifier` interface is bound to a `LogNotifier` so SMTP/Resend
   drops in later with no refactor (`src/leads/notifier.service.ts`).
-- **ORM: Prisma** (as recommended), PostgreSQL 16 (switched from MySQL 8 for Vercel/Neon hosting — Prisma made this a provider swap).
+- **ORM: Prisma** (as recommended), MySQL 8.
 
 Other assumptions: cuid string ids; the settings singleton is a single row keyed
 `"singleton"`; post/section structured content is validated JSON, never raw HTML.
@@ -45,7 +45,7 @@ Other assumptions: cuid string ids; the settings singleton is a single row keyed
 ## Prerequisites
 
 - Node.js 20+
-- PostgreSQL 16 (or use the bundled `docker-compose`; in the cloud use the free Neon Postgres from the Vercel Storage tab)
+- MySQL 8 (or use the bundled `docker-compose`)
 - npm 10+
 
 ## Quick start (local, without Docker)
@@ -63,16 +63,16 @@ Then start the frontend (`alfateem-web`: `npm run dev`) and log into the admin a
 `http://localhost:3000/academy-admin/login` with `SEED_ADMIN_EMAIL` /
 `SEED_ADMIN_PASSWORD`.
 
-## Quick start (Docker — API + Postgres)
+## Quick start (Docker — API + MySQL)
 
 ```bash
-cp .env.example .env          # set JWT_* secrets and POSTGRES_* passwords
+cp .env.example .env          # set JWT_* secrets and MYSQL_* passwords
 docker compose up --build
 # API starts, applies migrations automatically, then:
 docker compose exec api npm run db:seed
 ```
 
-`docker-compose.yml` provisions Postgres and the API. The admin app and public site are
+`docker-compose.yml` provisions MySQL and the API. The admin app and public site are
 separate projects; add them to the compose file if you want the whole stack together.
 
 ---
@@ -87,8 +87,8 @@ to start on anything missing or malformed.
 | `NODE_ENV` | no | `development` | `development` \| `test` \| `production` |
 | `PORT` | no | `4000` | HTTP port |
 | `APP_URL` | no | `http://localhost:4000` | Public origin (docs/links) |
-| `DATABASE_URL` | **yes** | — | PostgreSQL connection string. Use a least-privilege user in prod. |
-| `POSTGRES_DB` / `POSTGRES_USER` / `POSTGRES_PASSWORD` | Docker only | — | Provision the compose Postgres container; keep in sync with `DATABASE_URL`. |
+| `DATABASE_URL` | **yes** | — | MySQL connection string. Use a least-privilege user in prod. |
+| `MYSQL_DATABASE` / `MYSQL_USER` / `MYSQL_PASSWORD` / `MYSQL_ROOT_PASSWORD` | Docker only | — | Provision the compose MySQL container; keep in sync with `DATABASE_URL`. |
 | `JWT_ACCESS_SECRET` | **yes** | — | ≥32 chars. `openssl rand -base64 48` |
 | `JWT_REFRESH_SECRET` | **yes** | — | ≥32 chars, **different** from the access secret |
 | `JWT_ACCESS_TTL` | no | `900` | Access token lifetime (s) |
@@ -189,7 +189,7 @@ e2e (`test/auth.e2e-spec.ts`) covers login, auth-failure, RBAC, and refresh rota
 It needs a disposable database:
 
 ```bash
-DATABASE_URL="postgresql://cms:cms_password@localhost:5432/academy_cms_test" \
+DATABASE_URL="mysql://cms:cms_password@localhost:3306/academy_cms_test" \
   npm run db:migrate:dev && npm run db:seed
 npm run test:e2e
 ```

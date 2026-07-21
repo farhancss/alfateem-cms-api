@@ -4,7 +4,7 @@ Guidance for Claude Code (and developers) working in this repo. Read this first.
 
 ## What this is
 
-Headless CMS backend for the Al-Fateem Academy website. **NestJS 10 + Prisma + PostgreSQL 16**,
+Headless CMS backend for the Al-Fateem Academy website. **NestJS 10 + Prisma + MySQL 8**,
 JWT/RBAC auth, Swagger at `/docs`, the per-section **"folds"** page model, and public
 form endpoints. Base path `/api/v1`.
 
@@ -31,7 +31,7 @@ the compile gate.
 cp .env.example .env
 # Edit .env: set JWT_ACCESS_SECRET and JWT_REFRESH_SECRET to distinct 32+ char strings
 #   openssl rand -base64 48
-# Point DATABASE_URL at a PostgreSQL you can reach (or use docker compose below).
+# Point DATABASE_URL at a MySQL 8 you can reach (or use docker compose below).
 
 npm install
 npx prisma generate
@@ -41,17 +41,17 @@ npm run start:dev           # http://localhost:4000/api/v1 · docs at /docs
 npm test                    # unit tests (folds registry + block schema) — run without a DB
 ```
 
-Docker path (API + Postgres, no local Node/Postgres needed):
+Docker path (API + MySQL, no local Node/MySQL needed):
 
 ```bash
-cp .env.example .env        # set JWT_* + POSTGRES_* values
+cp .env.example .env        # set JWT_* + MYSQL_* values
 docker compose up --build
 docker compose exec api npm run db:seed
 ```
 
 ## Expected issues to fix on first build (be ready for these)
 
-1. **`prisma migrate` needs a reachable PostgreSQL.** If `DATABASE_URL` is wrong the migrate
+1. **`prisma migrate` needs a reachable MySQL.** If `DATABASE_URL` is wrong the migrate
    step fails first — fix the connection before anything else.
 2. **argon2 is a native module.** On Alpine/Docker it needs `python3 make g++` (the
    Dockerfile already installs these). On a bare `npm install` it compiles against the
