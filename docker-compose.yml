@@ -1,22 +1,21 @@
-# Local/prod parity: API + MySQL. The admin dashboard (academy-cms-admin) and the
-# public site (alfateem-web) are separate apps and run independently; add them here
+# Local/prod parity: API + Postgres. The public site (alfateem-web, which also hosts
+# the admin at /academy-admin) is a separate app and runs independently; add it here
 # if you want the whole stack under one compose file.
 services:
   db:
-    image: mysql:8.0
+    image: postgres:16
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: ${MYSQL_DATABASE:-academy_cms}
-      MYSQL_USER: ${MYSQL_USER:-cms}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-cms_password}
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-change_me_root_password}
+      POSTGRES_DB: ${POSTGRES_DB:-academy_cms}
+      POSTGRES_USER: ${POSTGRES_USER:-cms}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-cms_password}
     ports:
-      - '3306:3306'
+      - '5432:5432'
     volumes:
-      - db_data:/var/lib/mysql
+      - db_data:/var/lib/postgresql/data
     healthcheck:
       # API waits for this before running migrations.
-      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost', '-p${MYSQL_ROOT_PASSWORD:-change_me_root_password}']
+      test: ['CMD-SHELL', 'pg_isready -U ${POSTGRES_USER:-cms} -d ${POSTGRES_DB:-academy_cms}']
       interval: 5s
       timeout: 5s
       retries: 20
@@ -31,7 +30,7 @@ services:
       NODE_ENV: production
       PORT: 4000
       # Inside the compose network the DB host is the service name `db`.
-      DATABASE_URL: mysql://${MYSQL_USER:-cms}:${MYSQL_PASSWORD:-cms_password}@db:3306/${MYSQL_DATABASE:-academy_cms}
+      DATABASE_URL: postgresql://${POSTGRES_USER:-cms}:${POSTGRES_PASSWORD:-cms_password}@db:5432/${POSTGRES_DB:-academy_cms}
       JWT_ACCESS_SECRET: ${JWT_ACCESS_SECRET}
       JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET}
       JWT_ACCESS_TTL: ${JWT_ACCESS_TTL:-900}
