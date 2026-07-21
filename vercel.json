@@ -1,12 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run build",
-  "outputDirectory": "public",
-  "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
-  "functions": {
-    "api/index.js": {
-      "maxDuration": 30,
-      "includeFiles": "node_modules/{.prisma,argon2}/**"
-    }
-  }
+  "outputDirectory": "dist/src"
 }
