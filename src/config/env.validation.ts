@@ -29,6 +29,19 @@ export const envSchema = z.object({
   FRONTEND_REVALIDATE_URL: z.string().url().optional(),
   REVALIDATE_SECRET: z.string().optional(),
 
+  // Lead email notifications (optional). When SMTP_HOST and NOTIFY_TO are both set,
+  // new registrations/contact messages are emailed; otherwise they are only logged.
+  SMTP_HOST: z.string().optional(),
+  SMTP_PORT: z.coerce.number().int().positive().default(587),
+  SMTP_SECURE: z
+    .enum(['true', 'false'])
+    .default('false')
+    .transform((x) => x === 'true'),
+  SMTP_USER: z.string().optional(),
+  SMTP_PASS: z.string().optional(),
+  NOTIFY_FROM: z.string().default('Al-Fateem Academy <no-reply@alfateemacademy.com>'),
+  NOTIFY_TO: z.string().optional(),
+
   SWAGGER_ENABLED: z
     .enum(['true', 'false'])
     .default('true')

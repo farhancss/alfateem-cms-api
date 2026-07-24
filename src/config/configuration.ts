@@ -42,6 +42,15 @@ export const configuration = () => {
       url: e.FRONTEND_REVALIDATE_URL,
       secret: e.REVALIDATE_SECRET,
     },
+    smtp: {
+      host: e.SMTP_HOST,
+      port: e.SMTP_PORT,
+      secure: e.SMTP_SECURE,
+      user: e.SMTP_USER,
+      pass: e.SMTP_PASS,
+      from: e.NOTIFY_FROM,
+      to: e.NOTIFY_TO,
+    },
   };
 };
 

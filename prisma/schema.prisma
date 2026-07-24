@@ -326,6 +326,9 @@ model RegistrationLead {
   message    String?    @db.Text
   status     LeadStatus @default(NEW)
   source     String     @default("website")
+  // Marketing attribution captured client-side: { utmSource, utmMedium, utmCampaign,
+  // utmTerm, utmContent, referrer, landingPage }. Keys are whitelisted server-side.
+  attribution Json?
   createdAt  DateTime   @default(now())
   updatedAt  DateTime   @updatedAt
 
@@ -341,6 +344,7 @@ model ContactMessage {
   subject   String
   message   String        @db.Text
   status    MessageStatus @default(NEW)
+  attribution Json?
   createdAt DateTime      @default(now())
   updatedAt DateTime      @updatedAt
 

@@ -3,6 +3,7 @@ import { LeadStatus, MessageStatus } from '@prisma/client';
 import {
   IsEmail,
   IsEnum,
+  IsObject,
   IsOptional,
   IsString,
   MaxLength,
@@ -20,6 +21,18 @@ class HoneypotBase {
   @IsOptional()
   @IsString()
   company?: string;
+
+  @ApiPropertyOptional({
+    description:
+      'Marketing attribution captured client-side (utmSource, utmMedium, utmCampaign, ' +
+      'utmTerm, utmContent, referrer, landingPage). Unknown keys are dropped and values ' +
+      'truncated server-side.',
+    type: 'object',
+    additionalProperties: { type: 'string' },
+  })
+  @IsOptional()
+  @IsObject()
+  attribution?: Record<string, unknown>;
 }
 
 export class CreateRegistrationDto extends HoneypotBase {

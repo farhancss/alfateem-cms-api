@@ -1,4 +1,5 @@
 import { Injectable, Logger, NotFoundException } from '@nestjs/common';
+import { Prisma as P } from '@prisma/client';
 import { LeadStatus, MessageStatus, Prisma } from '@prisma/client';
 import { PrismaService } from '../prisma/prisma.service';
 import { paginate } from '../common/dto/paginated.dto';
@@ -21,6 +22,28 @@ export class LeadsService {
 
   // ── Public writes ────────────────────────────────────────────────────────────
 
+  /** Whitelist + truncate client-supplied attribution; returns undefined when empty. */
+  private static cleanAttribution(
+    raw: Record<string, unknown> | undefined,
+  ): P.InputJsonObject | undefined {
+    if (!raw) return undefined;
+    const KEYS = [
+      'utmSource',
+      'utmMedium',
+      'utmCampaign',
+      'utmTerm',
+      'utmContent',
+      'referrer',
+      'landingPage',
+    ] as const;
+    const out: Record<string, string> = {};
+    for (const key of KEYS) {
+      const value = raw[key];
+      if (typeof value === 'string' && value.trim()) out[key] = value.trim().slice(0, 300);
+    }
+    return Object.keys(out).length ? out : undefined;
+  }
+
   async submitRegistration(dto: CreateRegistrationDto) {
     if (dto.company) {
       // Honeypot tripped — pretend success, store nothing.
@@ -35,14 +58,27 @@ export class LeadsService {
         courseSlug: dto.courseSlug,
         message: dto.message,
         source: 'website',
+        attribution: LeadsService.cleanAttribution(dto.attribution),
       },
     });
+    const attribution = LeadsService.cleanAttribution(dto.attribution) as
+      | Record<string, string>
+      | undefined;
     await this.notifier
       .notify({
         kind: 'registration',
         name: lead.name,
         email: lead.email,
         summary: lead.courseSlug ? `Course: ${lead.courseSlug}` : 'No course selected',
+        details: {
+          Phone: lead.phone,
+          ...(lead.courseSlug ? { Course: lead.courseSlug } : {}),
+          ...(lead.message ? { Message: lead.message } : {}),
+          ...(attribution?.utmSource ? { Source: attribution.utmSource } : {}),
+          ...(attribution?.utmCampaign ? { Campaign: attribution.utmCampaign } : {}),
+          ...(attribution?.referrer ? { Referrer: attribution.referrer } : {}),
+          ...(attribution?.landingPage ? { 'Landing page': attribution.landingPage } : {}),
+        },
       })
       .catch((e) => this.logger.error('Notifier failed', e));
     return { ok: true, id: lead.id };
@@ -54,10 +90,22 @@ export class LeadsService {
       return { ok: true };
     }
     const msg = await this.prisma.contactMessage.create({
-      data: { name: dto.name, email: dto.email, subject: dto.subject, message: dto.message },
+      data: {
+        name: dto.name,
+        email: dto.email,
+        subject: dto.subject,
+        message: dto.message,
+        attribution: LeadsService.cleanAttribution(dto.attribution),
+      },
     });
     await this.notifier
-      .notify({ kind: 'contact', name: msg.name, email: msg.email, summary: msg.subject })
+      .notify({
+        kind: 'contact',
+        name: msg.name,
+        email: msg.email,
+        summary: msg.subject,
+        details: { Message: msg.message },
+      })
       .catch((e) => this.logger.error('Notifier failed', e));
     return { ok: true, id: msg.id };
   }
