@@ -113,12 +113,39 @@ model Course {
   order          Int      @default(0)
   published      Boolean  @default(true)
   lessons        Lesson[]
+  batches        Batch[]
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
 
   @@index([track])
   @@index([published])
   @@map("courses")
+}
+
+// A scheduled intake of a course: start date, class schedule, fee and seats. Public
+// course endpoints include only published upcoming batches; the admin manages the
+// full set. Seats are maintained by hand (seatsLeft) — decremented by staff as
+// enrollments confirm, giving the site honest scarcity ("3 seats left").
+model Batch {
+  id         String   @id @default(cuid())
+  courseId   String
+  course     Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  startDate  DateTime
+  // Human-readable class times, e.g. "Mon · Wed · Fri — 7:00–9:00 PM"
+  schedule   String
+  // Free text so installments/discounts fit: "Rs 4,000 / month" / "Rs 30,000 total"
+  fee        String?
+  seatsTotal Int?
+  seatsLeft  Int?
+  note       String?
+  published  Boolean  @default(true)
+  order      Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([courseId])
+  @@index([startDate])
+  @@map("batches")
 }
 
 model Lesson {

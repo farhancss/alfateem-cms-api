@@ -2,7 +2,14 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { Prisma } from '@prisma/client';
 import { PrismaService } from '../prisma/prisma.service';
 import { paginate } from '../common/dto/paginated.dto';
-import { CourseQueryDto, CreateCourseDto, LessonInputDto, UpdateCourseDto } from './dto/course.dto';
+import {
+  CourseQueryDto,
+  CreateBatchDto,
+  CreateCourseDto,
+  LessonInputDto,
+  UpdateBatchDto,
+  UpdateCourseDto,
+} from './dto/course.dto';
 
 @Injectable()
 export class CoursesService {
@@ -23,7 +30,10 @@ export class CoursesService {
     const [rows, total] = await this.prisma.$transaction([
       this.prisma.course.findMany({
         where,
-        include: { lessons: { orderBy: { order: 'asc' } } },
+        include: {
+          lessons: { orderBy: { order: 'asc' } },
+          batches: CoursesService.upcomingBatches(),
+        },
         orderBy: [{ order: 'asc' }, { title: 'asc' }],
         skip: query.skip,
         take: query.limit,
@@ -36,10 +46,56 @@ export class CoursesService {
   async findBySlug(slug: string) {
     const course = await this.prisma.course.findUnique({
       where: { slug },
-      include: { lessons: { orderBy: { order: 'asc' } } },
+      include: {
+        lessons: { orderBy: { order: 'asc' } },
+        batches: CoursesService.upcomingBatches(),
+      },
     });
     if (!course) throw new NotFoundException(`Course "${slug}" not found`);
     return course;
+  }
+
+  /** Public batch visibility: published, starting soon or started in the last week
+   *  (late joiners are common), soonest first. */
+  private static upcomingBatches() {
+    return {
+      where: {
+        published: true,
+        startDate: { gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) },
+      },
+      orderBy: [{ startDate: 'asc' as const }, { order: 'asc' as const }],
+    };
+  }
+
+  // ── Batches (admin) ──────────────────────────────────────────────────────────
+
+  listAdminBatches() {
+    return this.prisma.batch.findMany({
+      orderBy: { startDate: 'desc' },
+      include: { course: { select: { slug: true, title: true, short: true } } },
+    });
+  }
+
+  async createBatch(courseSlug: string, dto: CreateBatchDto) {
+    const course = await this.findBySlug(courseSlug);
+    return this.prisma.batch.create({
+      data: { ...dto, startDate: new Date(dto.startDate), courseId: course.id },
+    });
+  }
+
+  async updateBatch(id: string, dto: UpdateBatchDto) {
+    const batch = await this.prisma.batch.findUnique({ where: { id } });
+    if (!batch) throw new NotFoundException('Batch not found');
+    return this.prisma.batch.update({
+      where: { id },
+      data: { ...dto, startDate: dto.startDate ? new Date(dto.startDate) : undefined },
+    });
+  }
+
+  async deleteBatch(id: string) {
+    const batch = await this.prisma.batch.findUnique({ where: { id } });
+    if (!batch) throw new NotFoundException('Batch not found');
+    await this.prisma.batch.delete({ where: { id } });
   }
 
   create(dto: CreateCourseDto) {

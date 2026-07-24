@@ -7,6 +7,7 @@ import {
   IsBoolean,
   IsEnum,
   IsInt,
+  IsISO8601,
   IsOptional,
   IsString,
   Matches,
@@ -65,6 +66,35 @@ export class CreateCourseDto {
 }
 
 export class UpdateCourseDto extends PartialType(CreateCourseDto) {}
+
+export class CreateBatchDto {
+  @ApiProperty({ example: '2026-08-04', description: 'First class date (ISO 8601)' })
+  @IsISO8601()
+  startDate!: string;
+
+  @ApiProperty({ example: 'Mon · Wed · Fri — 7:00–9:00 PM' })
+  @IsString()
+  @MinLength(3)
+  schedule!: string;
+
+  @ApiPropertyOptional({ example: 'Rs 4,000 / month' })
+  @IsOptional()
+  @IsString()
+  fee?: string;
+
+  @ApiPropertyOptional({ example: 25 }) @IsOptional() @IsInt() @Min(0) seatsTotal?: number;
+  @ApiPropertyOptional({ example: 12 }) @IsOptional() @IsInt() @Min(0) seatsLeft?: number;
+
+  @ApiPropertyOptional({ example: 'Limited seats — call to reserve' })
+  @IsOptional()
+  @IsString()
+  note?: string;
+
+  @ApiPropertyOptional({ default: true }) @IsOptional() @IsBoolean() published?: boolean;
+  @ApiPropertyOptional({ default: 0 }) @IsOptional() @IsInt() @Min(0) order?: number;
+}
+
+export class UpdateBatchDto extends PartialType(CreateBatchDto) {}
 
 export class CourseQueryDto extends PaginationQueryDto {
   @ApiPropertyOptional({ enum: Track })

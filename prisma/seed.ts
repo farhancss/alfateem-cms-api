@@ -269,6 +269,48 @@ type ReviewSeed = {
   featured: boolean;
 };
 
+/** Demo batches so the course-page "Upcoming batches" section renders out of the box.
+ *  Dates are relative to seed time; fees are left for the academy to fill in from the
+ *  admin (Batches). Replaced as a set on each seed run. */
+async function seedBatches() {
+  const day = 24 * 60 * 60 * 1000;
+  const at = (days: number) => new Date(Date.now() + days * day);
+  const demo: { courseSlug: string; startDate: Date; schedule: string; seatsTotal: number; seatsLeft: number; note?: string }[] = [
+    {
+      courseSlug: 'web-development',
+      startDate: at(12),
+      schedule: 'Mon · Wed · Fri — 7:00–9:00 PM',
+      seatsTotal: 25,
+      seatsLeft: 9,
+      note: 'Evening batch — ideal for students and job holders',
+    },
+    {
+      courseSlug: 'web-development',
+      startDate: at(26),
+      schedule: 'Sat · Sun — 11:00 AM–2:00 PM',
+      seatsTotal: 25,
+      seatsLeft: 21,
+      note: 'Weekend batch',
+    },
+    {
+      courseSlug: 'wordpress-development',
+      startDate: at(19),
+      schedule: 'Tue · Thu — 7:00–9:00 PM',
+      seatsTotal: 20,
+      seatsLeft: 14,
+    },
+  ];
+  await prisma.batch.deleteMany();
+  let created = 0;
+  for (const { courseSlug, ...data } of demo) {
+    const course = await prisma.course.findUnique({ where: { slug: courseSlug } });
+    if (!course) continue; // slug drift — skip rather than fail the seed
+    await prisma.batch.create({ data: { ...data, courseId: course.id } });
+    created++;
+  }
+  console.log(`\u2713 ${created} demo batches`);
+}
+
 async function seedTestimonials() {
   const { reviews } = JSON.parse(
     readFileSync(join(__dirname, 'review-data.json'), 'utf8'),
@@ -497,6 +539,7 @@ async function main() {
   await seedPosts();
   await seedEvents();
   await seedGraduates();
+  await seedBatches();
   await seedTestimonials();
   await seedPages();
   console.log('Seed complete.');
