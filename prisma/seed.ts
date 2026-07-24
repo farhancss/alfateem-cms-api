@@ -538,7 +538,34 @@ async function seedPages() {
     ],
   );
 
-  console.log('✓ pages: home (10 folds), about (4), contact (1)');
+  // Legal pages — content generated from alfateem-web/src/lib/legal.ts (which is also
+  // the frontend's static fallback). One richText fold each; editable in the admin.
+  const legal = JSON.parse(readFileSync(join(__dirname, 'legal-data.json'), 'utf8')) as {
+    privacy: unknown[];
+    terms: unknown[];
+  };
+  await upsertPage(
+    'privacy-policy',
+    {
+      title: 'Privacy Policy',
+      metaTitle: 'Privacy Policy',
+      metaDescription:
+        'How Al-Fateem Academy collects, uses and protects your information when you use this website — in plain language.',
+    },
+    [{ type: 'richText', data: { blocks: legal.privacy } }],
+  );
+  await upsertPage(
+    'terms',
+    {
+      title: 'Terms of Use',
+      metaTitle: 'Terms of Use',
+      metaDescription:
+        'The terms that govern your use of the Al-Fateem Academy website, including course information, acceptable use and governing law.',
+    },
+    [{ type: 'richText', data: { blocks: legal.terms } }],
+  );
+
+  console.log('✓ pages: home (10 folds), about (4), contact (1), privacy-policy (1), terms (1)');
 }
 
 async function main() {

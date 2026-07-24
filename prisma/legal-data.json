@@ -1,0 +1,208 @@
+{
+  "_comment": "Generated from alfateem-web/src/lib/legal.ts — regenerate there, do not hand-edit.",
+  "privacy": [
+    {
+      "type": "p",
+      "text": "Effective date: 24 July 2026. This policy explains what information Al-Fateem Academy (\"we\", \"us\") collects through this website, why we collect it, and the choices you have. We keep it in plain language because you should not need a lawyer to understand what happens to your details."
+    },
+    {
+      "type": "h2",
+      "text": "Who we are"
+    },
+    {
+      "type": "p",
+      "text": "Al-Fateem Academy is a web development training institute located at Office #91, Falak Corporate City, Near Pakistan Post Office, Karachi, Pakistan. For anything related to this policy, contact us through the details on our Contact page."
+    },
+    {
+      "type": "h2",
+      "text": "What we collect"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Details you submit in our forms: your name, email address, phone number, the course you are interested in, and any message you write when registering interest or contacting us.",
+        "How you found us: if you arrive from an ad or a link, we note the campaign source (UTM parameters), the referring website, and the first page you landed on. This is stored only for your current visit in your browser and attached to a form only if you submit one.",
+        "Basic technical logs: our servers record requests (such as IP address and time) for security and troubleshooting, as virtually all websites do."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "We do not use third-party advertising or analytics cookies, we do not track you across other websites, and we never collect payment card details through this website."
+    },
+    {
+      "type": "h2",
+      "text": "How we use your information"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "To respond to your registration or enquiry — calling or messaging you back is the entire point of the forms.",
+        "To manage admissions: keeping track of which enquiries became enrollments so we plan batches and seats honestly.",
+        "To understand which of our marketing actually works (the campaign source mentioned above).",
+        "To meet legal obligations that apply to us in Pakistan."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "We do not sell your information, and we do not share it with anyone for their own marketing."
+    },
+    {
+      "type": "h2",
+      "text": "Who we share it with"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Service providers that run parts of the website for us — hosting and email delivery. They process data on our instructions only.",
+        "If you contact us on WhatsApp or call us, your conversation happens on that service under its own privacy policy.",
+        "Authorities, if the law requires it."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "How long we keep it"
+    },
+    {
+      "type": "p",
+      "text": "Enquiry and registration details are kept while they are relevant to admissions and for a reasonable period afterwards for our records. If you want your details removed sooner, ask us and we will delete them unless we are legally required to keep them."
+    },
+    {
+      "type": "h2",
+      "text": "Cookies and local storage"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Theme preference: your light/dark choice is saved in your browser so the site remembers it.",
+        "Visit source: campaign/referrer information is kept in your browser for the current visit only, as described above.",
+        "No third-party tracking cookies are set by this website."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Security"
+    },
+    {
+      "type": "p",
+      "text": "The website and its systems use industry-standard protections: encrypted connections (HTTPS), restricted staff access to enquiries, validated inputs, and rate limiting. No system is perfectly secure, but we take reasonable technical and organisational measures to protect your information."
+    },
+    {
+      "type": "h2",
+      "text": "Students under 18"
+    },
+    {
+      "type": "p",
+      "text": "Many of our students are young. If you are under 18, please involve a parent or guardian when submitting your details, and we recommend they accompany you for enrollment."
+    },
+    {
+      "type": "h2",
+      "text": "Your choices"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "You can ask us what information we hold about you.",
+        "You can ask us to correct or delete your details.",
+        "You can ask us to stop contacting you at any time."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "To exercise any of these, reach us through the Contact page — we will respond within a reasonable time."
+    },
+    {
+      "type": "h2",
+      "text": "Changes to this policy"
+    },
+    {
+      "type": "p",
+      "text": "If we change how we handle your information — for example, if we add analytics or online payments — we will update this page and its effective date before the change takes effect."
+    }
+  ],
+  "terms": [
+    {
+      "type": "p",
+      "text": "Effective date: 24 July 2026. These terms govern your use of the Al-Fateem Academy website. By using the site, you agree to them."
+    },
+    {
+      "type": "h2",
+      "text": "About this website"
+    },
+    {
+      "type": "p",
+      "text": "This website presents Al-Fateem Academy’s courses, batches, events and news, and lets you register interest or contact us. It is operated from Karachi, Pakistan."
+    },
+    {
+      "type": "h2",
+      "text": "Course and batch information"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Course outlines, durations, schedules, fees and seat availability shown on this website are indicative and may change. The academy confirms current details during admission.",
+        "Submitting a registration form expresses your interest — it does not by itself reserve a seat or form an enrollment contract. Enrollment is completed at the academy according to its admission process.",
+        "Seat counts and start dates are maintained by our staff in good faith but may lag behind real-time availability."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Acceptable use"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Do not submit false information in our forms or impersonate another person.",
+        "Do not attempt to disrupt, probe, or gain unauthorised access to the website or its systems.",
+        "Automated scraping or bulk submission of our forms is not permitted."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Intellectual property"
+    },
+    {
+      "type": "p",
+      "text": "The Al-Fateem Academy name, logo, course descriptions, and all original content on this website belong to the academy. Technology names and logos shown in course materials belong to their respective owners and indicate what we teach, not endorsement."
+    },
+    {
+      "type": "h2",
+      "text": "Reviews and testimonials"
+    },
+    {
+      "type": "p",
+      "text": "Student reviews shown on this website were publicly posted by their authors on platforms such as Google and Facebook, or submitted to us directly. If you are the author of a review and want it amended or removed from this site, contact us and we will act promptly."
+    },
+    {
+      "type": "h2",
+      "text": "Third-party links and services"
+    },
+    {
+      "type": "p",
+      "text": "The site links to third-party services (such as WhatsApp, Google Maps, and social platforms). We are not responsible for their content or how they handle your information — their own terms apply."
+    },
+    {
+      "type": "h2",
+      "text": "Liability"
+    },
+    {
+      "type": "p",
+      "text": "The website is provided on an \"as is\" basis. While we work to keep information accurate and the site available, we do not guarantee uninterrupted availability or that every detail is current, and we are not liable for losses arising from reliance on the website itself. Nothing in these terms limits liability that cannot be limited under the law of Pakistan."
+    },
+    {
+      "type": "h2",
+      "text": "Governing law"
+    },
+    {
+      "type": "p",
+      "text": "These terms are governed by the laws of Pakistan, and the courts of Karachi have jurisdiction over any dispute relating to this website."
+    },
+    {
+      "type": "h2",
+      "text": "Contact and changes"
+    },
+    {
+      "type": "p",
+      "text": "Questions about these terms are welcome through the Contact page. We may update these terms from time to time; the effective date above always reflects the current version."
+    }
+  ]
+}
