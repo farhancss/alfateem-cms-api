@@ -382,7 +382,17 @@ async function seedPages() {
           ],
         },
       },
-      { type: 'techMarquee', data: { items: TECH } },
+      {
+        type: 'ticker',
+        data: {
+          items: [
+            { text: 'Admissions open — new batches starting soon', href: '/courses/' },
+            { text: 'Featured: Web Development Foundations — beginner friendly', href: '/course/web-development/' },
+            { text: '3,500+ graduates placed in the IT industry since 2008' },
+            { text: 'Read our student reviews — rated 5.0 on Google', href: '/reviews/' },
+          ],
+        },
+      },
       {
         type: 'coursesGrid',
         data: {

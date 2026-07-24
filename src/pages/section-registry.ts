@@ -58,6 +58,22 @@ export const SECTION_REGISTRY: Record<SectionType, SectionDefinition> = {
     }),
   },
 
+  ticker: {
+    type: SectionType.ticker,
+    label: 'Announcements ticker',
+    refs: [],
+    schema: z.object({
+      items: z
+        .array(
+          z.object({
+            text: z.string().min(1),
+            href: z.string().optional(),
+          }),
+        )
+        .min(1),
+    }),
+  },
+
   whyUs: {
     type: SectionType.whyUs,
     label: 'Why us (pillars)',

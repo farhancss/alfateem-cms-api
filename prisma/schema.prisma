@@ -44,6 +44,7 @@ enum Level {
 enum SectionType {
   hero
   techMarquee
+  ticker
   whyUs
   coursesGrid
   graduatesWall
