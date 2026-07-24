@@ -1,5 +1,5 @@
 import { ApiProperty, ApiPropertyOptional, PartialType } from '@nestjs/swagger';
-import { Level, Track } from '@prisma/client';
+import { BatchMode, Level, Track } from '@prisma/client';
 import { Type } from 'class-transformer';
 import {
   ArrayNotEmpty,
@@ -71,6 +71,11 @@ export class CreateBatchDto {
   @ApiProperty({ example: '2026-08-04', description: 'First class date (ISO 8601)' })
   @IsISO8601()
   startDate!: string;
+
+  @ApiPropertyOptional({ enum: BatchMode, default: BatchMode.ONCAMPUS })
+  @IsOptional()
+  @IsEnum(BatchMode)
+  mode?: BatchMode;
 
   @ApiProperty({ example: 'Mon · Wed · Fri — 7:00–9:00 PM' })
   @IsString()

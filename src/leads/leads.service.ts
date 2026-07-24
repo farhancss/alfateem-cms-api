@@ -57,6 +57,7 @@ export class LeadsService {
         phone: dto.phone,
         courseSlug: dto.courseSlug,
         message: dto.message,
+        preferredMode: dto.preferredMode,
         source: 'website',
         attribution: LeadsService.cleanAttribution(dto.attribution),
       },
@@ -73,6 +74,16 @@ export class LeadsService {
         details: {
           Phone: lead.phone,
           ...(lead.courseSlug ? { Course: lead.courseSlug } : {}),
+          ...(lead.preferredMode
+            ? {
+                Attendance:
+                  lead.preferredMode === 'ONCAMPUS'
+                    ? 'On-campus'
+                    : lead.preferredMode === 'ONLINE'
+                      ? 'Online'
+                      : 'Either',
+              }
+            : {}),
           ...(lead.message ? { Message: lead.message } : {}),
           ...(attribution?.utmSource ? { Source: attribution.utmSource } : {}),
           ...(attribution?.utmCampaign ? { Campaign: attribution.utmCampaign } : {}),

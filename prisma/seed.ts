@@ -43,6 +43,10 @@ const TECH = [
 
 const FAQ = [
   {
+    q: 'Can I take the courses online?',
+    a: 'Yes. Alongside in-person classes at our Karachi campus, we run live online batches you can join from anywhere in Pakistan. Online students attend the same live sessions, get the same practical assignments, and receive the same support — pick your preferred format when you register.',
+  },
+  {
     q: 'Do I need any programming experience to join?',
     a: 'No. Our Web Development Foundations and JavaScript courses start from absolute zero. We teach HTML5 and CSS3 from first principles, and most of our graduates joined with no prior coding background.',
   },
@@ -275,11 +279,12 @@ type ReviewSeed = {
 async function seedBatches() {
   const day = 24 * 60 * 60 * 1000;
   const at = (days: number) => new Date(Date.now() + days * day);
-  const demo: { courseSlug: string; startDate: Date; schedule: string; seatsTotal: number; seatsLeft: number; note?: string }[] = [
+  const demo: { courseSlug: string; startDate: Date; schedule: string; mode: 'ONCAMPUS' | 'ONLINE' | 'HYBRID'; seatsTotal: number; seatsLeft: number; note?: string }[] = [
     {
       courseSlug: 'web-development',
       startDate: at(12),
       schedule: 'Mon · Wed · Fri — 7:00–9:00 PM',
+      mode: 'ONCAMPUS' as const,
       seatsTotal: 25,
       seatsLeft: 9,
       note: 'Evening batch — ideal for students and job holders',
@@ -288,16 +293,19 @@ async function seedBatches() {
       courseSlug: 'web-development',
       startDate: at(26),
       schedule: 'Sat · Sun — 11:00 AM–2:00 PM',
+      mode: 'HYBRID' as const,
       seatsTotal: 25,
       seatsLeft: 21,
-      note: 'Weekend batch',
+      note: 'Weekend batch — attend at the institute or join live online',
     },
     {
       courseSlug: 'wordpress-development',
       startDate: at(19),
       schedule: 'Tue · Thu — 7:00–9:00 PM',
+      mode: 'ONLINE' as const,
       seatsTotal: 20,
       seatsLeft: 14,
+      note: 'Live online batch — join from anywhere in Pakistan',
     },
   ];
   await prisma.batch.deleteMany();
@@ -387,6 +395,7 @@ async function seedPages() {
         data: {
           items: [
             { text: 'Admissions open — new batches starting soon', href: '/courses/' },
+            { text: 'Now offering live online classes — join from anywhere', href: '/register/' },
             { text: 'Featured: Web Development Foundations — beginner friendly', href: '/course/web-development/' },
             { text: '3,500+ graduates placed in the IT industry since 2008' },
             { text: 'Read our student reviews — rated 5.0 on Google', href: '/reviews/' },

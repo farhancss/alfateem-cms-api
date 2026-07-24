@@ -64,6 +64,12 @@ enum ReviewSource {
   WEBSITE
 }
 
+enum BatchMode {
+  ONCAMPUS
+  ONLINE
+  HYBRID
+}
+
 enum LeadStatus {
   NEW
   CONTACTED
@@ -132,6 +138,8 @@ model Batch {
   courseId   String
   course     Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
   startDate  DateTime
+  // Delivery: in-person at the institute, online (live classes), or both.
+  mode       BatchMode @default(ONCAMPUS)
   // Human-readable class times, e.g. "Mon · Wed · Fri — 7:00–9:00 PM"
   schedule   String
   // Free text so installments/discounts fit: "Rs 4,000 / month" / "Rs 30,000 total"
@@ -354,6 +362,8 @@ model RegistrationLead {
   message    String?    @db.Text
   status     LeadStatus @default(NEW)
   source     String     @default("website")
+  // Visitor's attendance preference from the register form: ONCAMPUS | ONLINE | ANY.
+  preferredMode String?
   // Marketing attribution captured client-side: { utmSource, utmMedium, utmCampaign,
   // utmTerm, utmContent, referrer, landingPage }. Keys are whitelisted server-side.
   attribution Json?

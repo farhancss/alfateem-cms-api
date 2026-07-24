@@ -3,6 +3,7 @@ import { LeadStatus, MessageStatus } from '@prisma/client';
 import {
   IsEmail,
   IsEnum,
+  IsIn,
   IsObject,
   IsOptional,
   IsString,
@@ -44,6 +45,14 @@ export class CreateRegistrationDto extends HoneypotBase {
   @IsOptional()
   @IsString()
   courseSlug?: string;
+
+  @ApiPropertyOptional({
+    description: 'Attendance preference',
+    enum: ['ONCAMPUS', 'ONLINE', 'ANY'],
+  })
+  @IsOptional()
+  @IsIn(['ONCAMPUS', 'ONLINE', 'ANY'])
+  preferredMode?: 'ONCAMPUS' | 'ONLINE' | 'ANY';
 
   @ApiPropertyOptional() @IsOptional() @IsString() @MaxLength(2000) message?: string;
 }
