@@ -26,6 +26,7 @@ import { SettingsModule } from './settings/settings.module';
 import { MediaModule } from './media/media.module';
 import { LeadsModule } from './leads/leads.module';
 import { HealthModule } from './health/health.module';
+import { StatsModule } from './stats/stats.module';
 
 @Module({
   imports: [
@@ -92,6 +93,7 @@ import { HealthModule } from './health/health.module';
     MediaModule,
     LeadsModule,
     HealthModule,
+    StatsModule,
   ],
   providers: [
     // Order matters: rate-limit → authenticate → authorize.
