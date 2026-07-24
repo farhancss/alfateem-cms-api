@@ -20,6 +20,7 @@ import { CoursesModule } from './courses/courses.module';
 import { PostsModule } from './posts/posts.module';
 import { EventsModule } from './events/events.module';
 import { GraduatesModule } from './graduates/graduates.module';
+import { VideosModule } from './videos/videos.module';
 import { TestimonialsModule } from './testimonials/testimonials.module';
 import { SettingsModule } from './settings/settings.module';
 import { MediaModule } from './media/media.module';
@@ -85,6 +86,7 @@ import { HealthModule } from './health/health.module';
     PostsModule,
     EventsModule,
     GraduatesModule,
+    VideosModule,
     TestimonialsModule,
     SettingsModule,
     MediaModule,

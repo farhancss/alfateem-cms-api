@@ -47,12 +47,16 @@
       "href": "/about/"
     },
     {
+      "label": "Reviews",
+      "href": "/reviews/"
+    },
+    {
       "label": "Our Graduates",
       "href": "/our-proud-students/"
     },
     {
-      "label": "Reviews",
-      "href": "/reviews/"
+      "label": "Videos",
+      "href": "/videos/"
     },
     {
       "label": "Events",
@@ -138,7 +142,7 @@
       "track": "Frontend",
       "level": "Beginner",
       "duration": "2 months",
-      "summary": "Learn the language that runs the web. Master modern JavaScript from the ground up — variables, functions, the DOM, events, async programming, fetch, and ES6+ features — then apply it by building real interactive applications.",
+      "summary": "Learn the language that runs the web. Master modern JavaScript from the ground up \u2014 variables, functions, the DOM, events, async programming, fetch, and ES6+ features \u2014 then apply it by building real interactive applications.",
       "stack": [
         "ES6+",
         "DOM APIs",
@@ -161,7 +165,7 @@
         {
           "title": "Async JavaScript & APIs",
           "slug": "async-javascript",
-          "blurb": "Promises, async/await, error handling, and consuming REST APIs with fetch — the skills behind every data-driven interface."
+          "blurb": "Promises, async/await, error handling, and consuming REST APIs with fetch \u2014 the skills behind every data-driven interface."
         }
       ],
       "seoTitle": "JavaScript Course in Karachi | Al-Fateem Academy",
@@ -174,7 +178,7 @@
       "track": "Frontend",
       "level": "Intermediate",
       "duration": "1 month",
-      "summary": "Extend your JavaScript with TypeScript — types, interfaces, generics, and advanced type-level programming. Write cleaner, scalable, error-resistant code for large applications and prepare for enterprise-level development.",
+      "summary": "Extend your JavaScript with TypeScript \u2014 types, interfaces, generics, and advanced type-level programming. Write cleaner, scalable, error-resistant code for large applications and prepare for enterprise-level development.",
       "stack": [
         "TypeScript",
         "Interfaces",
@@ -195,7 +199,7 @@
         }
       ],
       "seoTitle": "TypeScript Course in Karachi | Al-Fateem Academy",
-      "seoDescription": "Learn TypeScript in Karachi — types, interfaces, generics and advanced patterns for building maintainable, enterprise-grade applications."
+      "seoDescription": "Learn TypeScript in Karachi \u2014 types, interfaces, generics and advanced patterns for building maintainable, enterprise-grade applications."
     },
     {
       "slug": "react-nextjs",
@@ -231,11 +235,11 @@
         }
       ],
       "seoTitle": "React & Next.js Course in Karachi | Al-Fateem Academy",
-      "seoDescription": "Learn React and Next.js in Karachi. Hooks, state management, server components and SSR — build the fast, SEO-friendly apps employers hire for."
+      "seoDescription": "Learn React and Next.js in Karachi. Hooks, state management, server components and SSR \u2014 build the fast, SEO-friendly apps employers hire for."
     },
     {
       "slug": "php-programming",
-      "title": "Backend Development — PHP & Node.js",
+      "title": "Backend Development \u2014 PHP & Node.js",
       "short": "Backend / PHP",
       "track": "Backend",
       "level": "Intermediate",
@@ -271,12 +275,12 @@
     },
     {
       "slug": "database",
-      "title": "Databases — MySQL & MongoDB",
+      "title": "Databases \u2014 MySQL & MongoDB",
       "short": "Database",
       "track": "Data",
       "level": "Intermediate",
       "duration": "1 month",
-      "summary": "Understand how to store, manage, and retrieve data with MySQL and MongoDB. Learn database design, queries, relationships, indexing, and optimisation — then integrate them into real applications.",
+      "summary": "Understand how to store, manage, and retrieve data with MySQL and MongoDB. Learn database design, queries, relationships, indexing, and optimisation \u2014 then integrate them into real applications.",
       "stack": [
         "MySQL",
         "MongoDB",
@@ -307,7 +311,7 @@
       "track": "Platform",
       "level": "Beginner",
       "duration": "2 months",
-      "summary": "Build professional websites with WordPress from scratch. Develop custom themes, create plugins, and design with Elementor. Built for freelancing and client work — deliver high-quality sites quickly and profitably.",
+      "summary": "Build professional websites with WordPress from scratch. Develop custom themes, create plugins, and design with Elementor. Built for freelancing and client work \u2014 deliver high-quality sites quickly and profitably.",
       "stack": [
         "WordPress",
         "Custom Themes",
@@ -320,7 +324,7 @@
         {
           "title": "Custom Theme Development",
           "slug": "custom-theme-development",
-          "blurb": "The template hierarchy, the loop, hooks and filters. Build a theme from a blank folder rather than fighting someone else’s."
+          "blurb": "The template hierarchy, the loop, hooks and filters. Build a theme from a blank folder rather than fighting someone else\u2019s."
         },
         {
           "title": "Plugins & Elementor",
@@ -329,7 +333,7 @@
         }
       ],
       "seoTitle": "WordPress Development Course in Karachi | Al-Fateem",
-      "seoDescription": "Learn WordPress development in Karachi. Custom themes, plugins, Elementor and WooCommerce — built for freelancing and client work."
+      "seoDescription": "Learn WordPress development in Karachi. Custom themes, plugins, Elementor and WooCommerce \u2014 built for freelancing and client work."
     },
     {
       "slug": "ai-automation",
@@ -391,7 +395,7 @@
         }
       ],
       "seoTitle": "Web Deployment & Hosting Course in Karachi | Al-Fateem",
-      "seoDescription": "Learn to deploy websites in Karachi. Hosting, domains, DNS, SSL and CI/CD — take projects from your laptop to production."
+      "seoDescription": "Learn to deploy websites in Karachi. Hosting, domains, DNS, SSL and CI/CD \u2014 take projects from your laptop to production."
     }
   ],
   "graduates": [
@@ -517,7 +521,7 @@
       "body": [
         {
           "type": "p",
-          "text": "WordPress is a CMS — a content management system. It is free and open source, and it is used by millions of people. WordPress works well for a wide range of sites: whether you are using it for blogging or for an eCommerce business, it is an ideal platform. Al-Fateem Academy offers a WordPress development course in Karachi that covers preventing the hacks described below."
+          "text": "WordPress is a CMS \u2014 a content management system. It is free and open source, and it is used by millions of people. WordPress works well for a wide range of sites: whether you are using it for blogging or for an eCommerce business, it is an ideal platform. Al-Fateem Academy offers a WordPress development course in Karachi that covers preventing the hacks described below."
         },
         {
           "type": "h2",
@@ -528,7 +532,7 @@
           "items": [
             "Choose strong passwords. An attacker will go for the admin login first, so avoid reusing a password from any other site. Pick something long that cannot be guessed or found in a breach dump.",
             "Keep your WordPress core, themes and plugins up to date. This alone closes the majority of the openings attackers rely on.",
-            "Restrict user access. WordPress sites often accumulate accounts, especially when you work with a group — and every extra account is another password that might be weak. Give each user only the access their role needs, and remove accounts you no longer use.",
+            "Restrict user access. WordPress sites often accumulate accounts, especially when you work with a group \u2014 and every extra account is another password that might be weak. Give each user only the access their role needs, and remove accounts you no longer use.",
             "Put a firewall in front of the site. With a firewall in place, even a delayed update is less likely to be exploited immediately.",
             "Set up automated backups. A backup does not prevent a compromise, but it is the difference between an afternoon of restoring and losing the site."
           ]
@@ -543,7 +547,7 @@
         },
         {
           "type": "p",
-          "text": "Many people use online platforms to share their ideas and thoughts. Blogging is the clearest example — a WordPress site used to publish written content, pictures and video to an online audience."
+          "text": "Many people use online platforms to share their ideas and thoughts. Blogging is the clearest example \u2014 a WordPress site used to publish written content, pictures and video to an online audience."
         },
         {
           "type": "h3",
@@ -613,7 +617,7 @@
         },
         {
           "type": "p",
-          "text": "One of the most effective ways to grow an online business is to actually measure it. Connecting Google Analytics to WooCommerce turns your store from a black box into something you can reason about — what sells, what does not, and where people give up."
+          "text": "One of the most effective ways to grow an online business is to actually measure it. Connecting Google Analytics to WooCommerce turns your store from a black box into something you can reason about \u2014 what sells, what does not, and where people give up."
         },
         {
           "type": "p",
@@ -627,7 +631,7 @@
           "type": "ul",
           "items": [
             "Plugin installation",
-            "Plugin configuration — global site tag, standard tracking, advertising network, enhanced link attribution, anonymising IP addresses, 404 tracking, transactions, and add-to-cart",
+            "Plugin configuration \u2014 global site tag, standard tracking, advertising network, enhanced link attribution, anonymising IP addresses, 404 tracking, transactions, and add-to-cart",
             "Conversion tracking in Google Analytics"
           ]
         },
@@ -637,7 +641,7 @@
         },
         {
           "type": "p",
-          "text": "Installation is the first step. Prefer plugins built by WooCommerce itself, or ones WooCommerce explicitly recommends — they track the platform’s own changes and break less often. The WooCommerce Google Analytics Integration plugin is the obvious starting point."
+          "text": "Installation is the first step. Prefer plugins built by WooCommerce itself, or ones WooCommerce explicitly recommends \u2014 they track the platform\u2019s own changes and break less often. The WooCommerce Google Analytics Integration plugin is the obvious starting point."
         },
         {
           "type": "ol",
@@ -668,7 +672,7 @@
             "On the dashboard, click Admin in the bottom left-hand corner.",
             "Add a new account or property, depending on how your Analytics is structured.",
             "Name the account and create a new property.",
-            "Choose Web — not iOS or Android, which are for app tracking. WooCommerce is a web app.",
+            "Choose Web \u2014 not iOS or Android, which are for app tracking. WooCommerce is a web app.",
             "Add your website URL.",
             "Copy the tracking ID into the plugin settings in your WordPress admin.",
             "Check the \"Enable standard tracking\" box.",
@@ -710,7 +714,7 @@
         },
         {
           "type": "p",
-          "text": "Leave this unchecked if you are a beginner. It improves in-page analytics reports by distinguishing between multiple links to the same URL on one page, using link element IDs — but reading the output requires a deeper understanding of Analytics."
+          "text": "Leave this unchecked if you are a beginner. It improves in-page analytics reports by distinguishing between multiple links to the same URL on one page, using link element IDs \u2014 but reading the output requires a deeper understanding of Analytics."
         },
         {
           "type": "h3",
@@ -726,7 +730,7 @@
         },
         {
           "type": "p",
-          "text": "Tracks the error pages your visitors hit. This is the cheapest way to find broken and dead links — particularly useful after you delete a product and want to know whether people are still trying to reach it, so you can 301 them to a similar product or category."
+          "text": "Tracks the error pages your visitors hit. This is the cheapest way to find broken and dead links \u2014 particularly useful after you delete a product and want to know whether people are still trying to reach it, so you can 301 them to a similar product or category."
         },
         {
           "type": "h3",
@@ -734,7 +738,7 @@
         },
         {
           "type": "p",
-          "text": "Check this to track transactions, revenue, refunds, shipping, tax and other financial metrics. Note that WooCommerce needs a supported payment gateway add-on — PayPal Checkout, Stripe, Square, Braintree and similar. Without a gateway, transactions are not tracked at all."
+          "text": "Check this to track transactions, revenue, refunds, shipping, tax and other financial metrics. Note that WooCommerce needs a supported payment gateway add-on \u2014 PayPal Checkout, Stripe, Square, Braintree and similar. Without a gateway, transactions are not tracked at all."
         },
         {
           "type": "h3",
@@ -742,7 +746,7 @@
         },
         {
           "type": "p",
-          "text": "Fires an event whenever a visitor adds a product to the cart. This is what makes drop-off analysis possible — you can see where in the funnel people stop."
+          "text": "Fires an event whenever a visitor adds a product to the cart. This is what makes drop-off analysis possible \u2014 you can see where in the funnel people stop."
         },
         {
           "type": "h2",
@@ -758,7 +762,7 @@
         },
         {
           "type": "p",
-          "text": "Drop-off pages are the pages a visitor reached without making a purchase — also known as checkout behaviour analysis. Enabling Enhanced Ecommerce gives you the drop-off rate directly."
+          "text": "Drop-off pages are the pages a visitor reached without making a purchase \u2014 also known as checkout behaviour analysis. Enabling Enhanced Ecommerce gives you the drop-off rate directly."
         }
       ]
     }
@@ -809,7 +813,7 @@
       "title": "8th Year of Celebration Event",
       "slug": "8th-year-of-celebration-event-held-on-20th-feb-2017",
       "date": "2017-02-20",
-      "blurb": "The academy’s eighth-year celebration, recognising the students who completed their training that year.",
+      "blurb": "The academy\u2019s eighth-year celebration, recognising the students who completed their training that year.",
       "cover": "https://www.alfateemacademy.com/wp-content/themes/afaacademy/assets/img/post.jpg",
       "images": []
     }

@@ -245,6 +245,24 @@ model Graduate {
   @@map("graduates")
 }
 
+// YouTube video library — the admin pastes video URLs; the site renders an SEO-safe
+// gallery (thumbnail facade, embed on click). `videoId` is parsed and validated from
+// `youtubeUrl` on write so the frontend never parses URLs.
+model Video {
+  id          String   @id @default(cuid())
+  title       String
+  youtubeUrl  String
+  videoId     String
+  description String?  @db.Text
+  order       Int      @default(0)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([published])
+  @@map("videos")
+}
+
 // Student / customer reviews. Imported (Google, Facebook) or entered manually in the
 // admin. `approved` gates public visibility (moderation); `featured` surfaces the review
 // in highlighted placements (home/about). `quote` is free text (rendered as plain text,
